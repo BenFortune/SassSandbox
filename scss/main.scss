@@ -4,12 +4,7 @@
 @import "partials/_globalFonts";
 @import "partials/_globalButtons";
     
- /*  PAGE SPECIFIC STYLES  */
+/*  PAGE SPECIFIC STYLES  */
 body {
     font-family: $main-font-stack;
-}
-h1 {
-    color: $h1-color;
-    font-style: italic;
-    font-weight:500;
 }

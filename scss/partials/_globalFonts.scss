@@ -2,6 +2,9 @@ $main-font-stack: sans-serif;
 $h-font-stack: 'Roboto Condensed', sans-serif;
 $h1-color: #F60;
 
-h1 {
+h1, h2, h3 {
     @include header-text;
+}
+h2 {
+    color: #666;
 }
