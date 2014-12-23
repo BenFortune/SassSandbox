@@ -6799,8 +6799,56 @@ button.close {
     display: none !important;
   }
 }
-/*  PAGE SPECIFIC STYLES  */
+/*  PAGE LAYOUT  */
+/*  END PAGE LAYOUT  */
+/*  H1-H6 ELEMENTS  */
+/*  END H1-H6 ELEMENTS  */
+/*  BUTTONS AND LINKS  */
+/*  END BUTTONS AND LINKS  */
 h1 {
-  color: #333;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.dice-link, .dice-link:visited {
+  color: #069;
+  text-decoration: none;
+}
+
+.dice-link:hover, .dice-link:active, .dice-link:focus {
+  color: #6CF;
+  text-decoration: underline;
+}
+
+.dice-button {
+  color: #FFF;
+  background-color: #069;
+  border-color: #069;
+}
+
+.dice-button:hover, .dice-button:focus, .dice-button:active {
+  background-color: #6Cf;
+  border-color: #6CF;
+}
+
+.dice-secondary-button {
+  color: #069;
+  background-color: #FFF;
+  border-color: #069;
+}
+
+.dice-secondary-button:hover, .dice-secondary-button:focus, .dice-secondary-button:active {
+  color: #6CF;
+  background-color: #FFF;
+  border-color: #6CF;
+}
+
+/*  PAGE SPECIFIC STYLES  */
+body {
+  font-family: sans-serif;
+}
+
+h1 {
+  color: #ff6600;
+  font-style: italic;
   font-weight: 500;
 }

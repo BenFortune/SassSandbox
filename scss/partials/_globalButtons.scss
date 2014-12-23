@@ -1,0 +1,18 @@
+.dice-link, .dice-link:visited{
+    @include dice-link;
+}
+.dice-link:hover, .dice-link:active, .dice-link:focus{
+    @include dice-link-hover;
+}
+.dice-button{
+    @include dice-button;
+}
+.dice-button:hover, .dice-button:focus, .dice-button:active{
+    @include dice-button-hover;
+}
+.dice-secondary-button{
+    @include dice-secondary-button;
+}
+.dice-secondary-button:hover, .dice-secondary-button:focus, .dice-secondary-button:active{
+    @include dice-secondary-button-hover;
+}

@@ -1,9 +1,15 @@
 /*  IMPORT TWITTER BOOTSTRAP  */
-@import "../bower_components/customer_club/assets/stylesheets/_bootstrap.scss";
+@import "../bower_components/customer_club/assets/stylesheets/_bootstrap";
+@import "partials/_globalMixins";
+@import "partials/_globalFonts";
+@import "partials/_globalButtons";
     
-/*  PAGE SPECIFIC STYLES  */
-
+ /*  PAGE SPECIFIC STYLES  */
+body {
+    font-family: $main-font-stack;
+}
 h1 {
-    color:#333;
+    color: $h1-color;
+    font-style: italic;
     font-weight:500;
 }
