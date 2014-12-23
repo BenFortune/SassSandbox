@@ -1,13 +1,13 @@
-/*  PAGE LAYOUT  */
+//  PAGE LAYOUT 
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
      -moz-border-radius: $radius;
       -ms-border-radius: $radius;
           border-radius: $radius;
 }
-/*  END PAGE LAYOUT  */
+//  END PAGE LAYOUT
 
-/*  H1-H6 ELEMENTS  */
+//  H1-H6 ELEMENTS 
 @mixin header-text {
     font: {
         family: 'Roboto Condensed', sans-serif;
@@ -15,34 +15,38 @@
         style: italic;
     }
 }
-/*  END H1-H6 ELEMENTS  */
+//  END H1-H6 ELEMENTS
 
-/*  BUTTONS AND LINKS  */
+//  BUTTONS, LINKS AND VARIABLES
+$main-btn-color: #069;
+$main-btn-text-color: #FFF;
+$main-btn-interaction-color: #6CF;
+
 @mixin dice-link {
-    color: #069;
+    color: $main-btn-color;
     text-decoration:none;
 }
 @mixin dice-link-hover {
-    color: #6CF;
+    color: $main-btn-interaction-color;
     text-decoration:underline;
 }
 @mixin dice-button {
-    color: #FFF;
-    background-color:#069;
-    border-color: #069;
+    color: $main-btn-text-color;
+    background-color: $main-btn-color;
+    border-color: $main-btn-color;
 }
 @mixin dice-button-hover {
-    background-color: #6Cf;
-    border-color: #6CF;
+    background-color: $main-btn-interaction-color;
+    border-color: $main-btn-interaction-color;
 }
 @mixin dice-secondary-button {
-    color: #069;
-    background-color: #FFF;
-    border-color: #069;
+    color: $main-btn-color;
+    background-color: $main-btn-text-color;
+    border-color: $main-btn-color;
 }
 @mixin dice-secondary-button-hover {
-    color: #6CF;
-    background-color: #FFF;
-    border-color: #6CF;
+    color: $main-btn-interaction-color;
+    background-color: $main-btn-text-color;
+    border-color: $main-btn-interaction-color;
 }
-/*  END BUTTONS AND LINKS  */
+//  END BUTTONS AND LINKS

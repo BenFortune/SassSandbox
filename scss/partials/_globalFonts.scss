@@ -1,10 +1,18 @@
 $main-font-stack: sans-serif;
-$h-font-stack: 'Roboto Condensed', sans-serif;
-$h1-color: #F60;
+$main-text-color: #333;
+$secondary-text-color: #666;
+$font-boldness: 300;
 
+body {
+    color: $main-text-color;
+    font: {
+        family: $main-font-stack;
+        weight: $font-boldness;
+    }
+}
 h1, h2, h3 {
     @include header-text;
 }
 h2 {
-    color: #666;
+    color: $secondary-text-color;
 }

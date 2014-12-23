@@ -6799,12 +6799,12 @@ button.close {
     display: none !important;
   }
 }
-/*  PAGE LAYOUT  */
-/*  END PAGE LAYOUT  */
-/*  H1-H6 ELEMENTS  */
-/*  END H1-H6 ELEMENTS  */
-/*  BUTTONS AND LINKS  */
-/*  END BUTTONS AND LINKS  */
+body {
+  color: #333333;
+  font-family: sans-serif;
+  font-weight: 300;
+}
+
 h1, h2, h3 {
   font-family: 'Roboto Condensed', sans-serif;
   font-weight: 500;
@@ -6812,43 +6812,37 @@ h1, h2, h3 {
 }
 
 h2 {
-  color: #666;
+  color: #666666;
 }
 
-.dice-link, .dice-link:visited {
-  color: #069;
+.dice-link {
+  color: #006699;
   text-decoration: none;
 }
-
-.dice-link:hover, .dice-link:active, .dice-link:focus {
-  color: #6CF;
+.dice-link:hover, .dice-link:focus, .dice-link:active {
+  color: #66ccff;
   text-decoration: underline;
 }
 
 .dice-button {
-  color: #FFF;
-  background-color: #069;
-  border-color: #069;
+  color: white;
+  background-color: #006699;
+  border-color: #006699;
 }
-
 .dice-button:hover, .dice-button:focus, .dice-button:active {
-  background-color: #6Cf;
-  border-color: #6CF;
+  background-color: #66ccff;
+  border-color: #66ccff;
 }
 
 .dice-secondary-button {
-  color: #069;
-  background-color: #FFF;
-  border-color: #069;
+  color: #006699;
+  background-color: white;
+  border-color: #006699;
 }
-
 .dice-secondary-button:hover, .dice-secondary-button:focus, .dice-secondary-button:active {
-  color: #6CF;
-  background-color: #FFF;
-  border-color: #6CF;
+  color: #66ccff;
+  background-color: white;
+  border-color: #66ccff;
 }
 
 /*  PAGE SPECIFIC STYLES  */
-body {
-  font-family: sans-serif;
-}
