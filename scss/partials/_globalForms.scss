@@ -1,0 +1,9 @@
+.dice-form {
+    .form-control{
+        border-color: #E5E5E5;
+    }
+    .form-group-lg .form-control {
+        height: 46px;
+        @include border-radius(2px);
+    }
+}
