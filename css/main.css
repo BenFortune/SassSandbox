@@ -6845,6 +6845,12 @@ h2 {
   border-color: #66ccff;
 }
 
+.dice-form {
+  margin-top: 15px;
+}
+.dice-form label {
+  color: #B5B5B5;
+}
 .dice-form .form-control {
   border-color: #E5E5E5;
 }
