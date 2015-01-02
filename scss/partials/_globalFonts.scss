@@ -1,18 +1,15 @@
-$main-font-stack: sans-serif;
-$main-text-color: #333;
-$secondary-text-color: #666;
-$font-boldness: 300;
+// BOOTSTRAP OVERRIDES FOR COMMON FONT STYLES
 
 body {
-    color: $main-text-color;
+    color: $main-font-color;
     font: {
         family: $main-font-stack;
-        weight: $font-boldness;
+        weight: $main-font-boldness;
     }
 }
 h1, h2, h3 {
     @include header-text;
 }
 h2 {
-    color: $secondary-text-color;
+    color: $secondary-font-color;
 }

@@ -1,0 +1,14 @@
+.dice-alert {
+    color: $main-font-color;
+    font-size: 16px;
+}
+
+.dice-alert.alert-danger {
+    background-color: $warning-red;
+    border-color: $warning-red;
+}
+
+.dice-alert.alert-warning {
+    background-color: $warning-yellow;
+    border-color: $warning-yellow;
+}

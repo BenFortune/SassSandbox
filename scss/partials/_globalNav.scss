@@ -1,0 +1,27 @@
+.dice-navbar {
+    border: none;
+    border-radius: 0;
+    margin-bottom: 0;
+    background-color: #333333;
+    .navbar-nav > li > a {
+        color: #FFFFFF;
+        &:hover,
+        &:focus {
+            background-color: #090909;
+        }
+    }
+    .navbar-brand {
+        padding: 11px 15px;
+        display: block;
+        img {
+            display: block;
+            width: 60px;
+        }
+    }
+    .icon-user-1 {
+        display: inline-block;
+        font-size: 20px;
+        vertical-align: bottom;
+        height: 1em;
+    }
+}

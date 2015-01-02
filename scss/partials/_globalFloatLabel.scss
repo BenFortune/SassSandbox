@@ -1,0 +1,30 @@
+.dice-float-label {
+    background: #FFFFFF;
+    @include border-radius(4px);    
+    label {
+        position: absolute;
+        margin: 10px 0 0 11px;
+        font-weight: normal;
+        font-size: 18px;
+        color: #B5B5B5;
+        transition: all 0.2s ease-out;
+        z-index: 1;
+    } input {
+        z-index: 2;
+        position: relative;
+        background: transparent;
+        transition: padding 0.2s ease-out;
+    }
+}
+.dice-float-label-on {
+    label {
+        margin-top: 4px;
+        font-weight: normal;
+        font-size: 12px;
+        z-index: 3;
+    }
+    input {
+        padding-top: 17px !important;
+        padding-bottom: 3px !important;
+    }
+}

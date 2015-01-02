@@ -6799,6 +6799,11 @@ button.close {
     display: none !important;
   }
 }
+/* GLOBAL STYLES */
+body {
+  background-color: whitesmoke;
+}
+
 body {
   color: #333333;
   font-family: sans-serif;
@@ -6806,7 +6811,7 @@ body {
 }
 
 h1, h2, h3 {
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   font-weight: 500;
   font-style: italic;
 }
@@ -6815,38 +6820,40 @@ h2 {
   color: #666666;
 }
 
-.dice-link {
+.dice-btn-link {
   color: #006699;
   text-decoration: none;
 }
-.dice-link:hover, .dice-link:focus, .dice-link:active {
+.dice-btn-link:hover, .dice-btn-link:focus, .dice-btn-link:active {
   color: #66ccff;
   text-decoration: underline;
 }
 
-.dice-button {
+.dice-btn {
   color: white;
   background-color: #006699;
   border-color: #006699;
 }
-.dice-button:hover, .dice-button:focus, .dice-button:active {
+.dice-btn:hover, .dice-btn:focus, .dice-btn:active {
+  color: white;
   background-color: #66ccff;
   border-color: #66ccff;
 }
 
-.dice-secondary-button {
+.dice-btn-secondary {
   color: #006699;
   background-color: white;
   border-color: #006699;
 }
-.dice-secondary-button:hover, .dice-secondary-button:focus, .dice-secondary-button:active {
-  color: #66ccff;
-  background-color: white;
+.dice-btn-secondary:hover, .dice-btn-secondary:focus, .dice-btn-secondary:active {
+  color: white;
+  background-color: #006699;
   border-color: #66ccff;
 }
 
 .dice-form {
   margin-top: 15px;
+  margin-bottom: 15px;
 }
 .dice-form label {
   color: #B5B5B5;
@@ -6862,4 +6869,59 @@ h2 {
   border-radius: 2px;
 }
 
+.dice-alert {
+  color: #333333;
+  font-size: 16px;
+}
+
+.dice-alert.alert-danger {
+  background-color: #f2dede;
+  border-color: #f2dede;
+}
+
+.dice-alert.alert-warning {
+  background-color: #fcf8e3;
+  border-color: #fcf8e3;
+}
+
+.dice-float-label {
+  background: #FFFFFF;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+}
+.dice-float-label label {
+  position: absolute;
+  margin: 10px 0 0 11px;
+  font-weight: normal;
+  font-size: 18px;
+  color: #B5B5B5;
+  transition: all 0.2s ease-out;
+  z-index: 1;
+}
+.dice-float-label input {
+  z-index: 2;
+  position: relative;
+  background: transparent;
+  transition: padding 0.2s ease-out;
+}
+
+.dice-float-label-on label {
+  margin-top: 4px;
+  font-weight: normal;
+  font-size: 12px;
+  z-index: 3;
+}
+.dice-float-label-on input {
+  padding-top: 17px !important;
+  padding-bottom: 3px !important;
+}
+
 /*  PAGE SPECIFIC STYLES  */
+/* Add to a helpers sass file
+%clearfix::after {
+    content: '';
+    display: table;
+    clear: both;
+}*/
