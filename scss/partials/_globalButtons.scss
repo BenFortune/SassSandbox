@@ -1,20 +1,20 @@
 // BOOTSTRAP OVERRIDES FOR COMMMON BUTTON AND LINK STYLES
 
 .dice-btn-link {
-    @include dice-link;
-    &:hover, &:focus, &:active {
-        @include dice-link-hover;
-    }
+  @include btn(link);
+  &:hover, &:focus, &:active {
+    @include btn-action(link);
+  }
 }
 .dice-btn {
-    @include dice-button;
-    &:hover, &:focus, &:active {
-        @include dice-button-hover;
-    }
+  @include btn(primary);
+  &:hover, &:focus, &:active {
+    @include btn-action(primary);
+  }
 }
 .dice-btn-secondary {
-    @include dice-secondary-button;
-    &:hover, &:focus, &:active {
-        @include dice-secondary-button-hover;
-    }
+  @include btn(secondary);
+  &:hover, &:focus, &:active {
+    @include btn-action(secondary);
+  }
 }

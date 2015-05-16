@@ -1,4 +1,4 @@
-//  PAGE LAYOUT 
+//  PAGE LAYOUT
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
      -moz-border-radius: $radius;
@@ -7,7 +7,7 @@
 }
 //  END PAGE LAYOUT
 
-//  H1-H6 ELEMENTS 
+//  H1-H6 ELEMENTS
 @mixin header-text {
     font: {
         family: $header-font-stack;
@@ -18,35 +18,95 @@
 //  END H1-H6 ELEMENTS
 
 //  BUTTONS, LINKS AND VARIABLES
-@mixin dice-link {
+@mixin btn($btn-name) {
+  @if $btn-name == link {
     color: $btn-default-blue;
     text-decoration:none;
-}
-@mixin dice-link-hover {
-    color: $btn-interaction-blue;
-    text-decoration:underline;
-}
-@mixin dice-button {
+  }
+  @else if $btn-name == primary {
     color: $btn-white;
     background-color: $btn-default-blue;
     border-color: $btn-default-blue;
-}
-@mixin dice-button-hover {
-    color: $btn-white;
-    background-color: $btn-interaction-blue;
-    border-color: $btn-interaction-blue;
-}
-@mixin dice-secondary-button {
+  }
+  @else if $btn-name == secondary {
     color: $btn-default-blue;
     background-color: $btn-white;
     border-color: $btn-default-blue;
+  }
+  @else {
+    @warn "You didn't enter the correct button variable";
+  }
 }
-@mixin dice-secondary-button-hover {
+@mixin btn-action($btn-name) {
+  @if $btn-name == link {
+    color: $btn-interaction-blue;
+    text-decoration:underline;
+  }
+  @else if $btn-name == primary {
     color: $btn-white;
-    background-color: $btn-default-blue;
+    background-color: $btn-interaction-blue;
     border-color: $btn-interaction-blue;
+  }
+  @else if $btn-name == secondary {
+    color: $btn-default-blue;
+    background-color: $btn-white;
+    border-color: $btn-interaction-blue;
+  }
+  @else {
+    @warn "You didn't enter the correct button action variable";
+  }
 }
 //  END BUTTONS AND LINKS
 
 // FORMS AND INPUTS
 // END FORMS AND INPUTS
+
+// MEDIA QUERIES
+@mixin wider-than($point) {
+  @if $point == large {
+    @media screen and (min-width: 1024px) { @content; }
+  }
+  @else if $point == medium {
+    @media screen and (min-width: 800px) { @content; }
+  }
+  @else if $point == small {
+    @media screen and (min-width: 600px) { @content; }
+  }
+  @else {
+    @media screen and (min-width: $point) { @content; }
+  }
+}
+// END MEDIA QUERIES
+
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Extra small screen / phone
+// Note: Deprecated $screen-xs and $screen-phone as of v3.0.1
+$screen-xs:                  480px !default;
+$screen-xs-min:              $screen-xs !default;
+$screen-phone:               $screen-xs-min !default;
+
+// Small screen / tablet
+// Note: Deprecated $screen-sm and $screen-tablet as of v3.0.1
+$screen-sm:                  768px !default;
+$screen-sm-min:              $screen-sm !default;
+$screen-tablet:              $screen-sm-min !default;
+
+// Medium screen / desktop
+// Note: Deprecated $screen-md and $screen-desktop as of v3.0.1
+$screen-md:                  992px !default;
+$screen-md-min:              $screen-md !default;
+$screen-desktop:             $screen-md-min !default;
+
+// Large screen / wide desktop
+// Note: Deprecated $screen-lg and $screen-lg-desktop as of v3.0.1
+$screen-lg:                  1200px !default;
+$screen-lg-min:              $screen-lg !default;
+$screen-lg-desktop:          $screen-lg-min !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
