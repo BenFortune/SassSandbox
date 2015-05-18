@@ -33,6 +33,10 @@
     background-color: $btn-white;
     border-color: $btn-default-blue;
   }
+  @else if $btn-name == dropdown {
+    background-color: $btn-white;
+    border:1px solid $border-default-gray;
+  }
   @else {
     @warn "You didn't enter the correct button variable";
   }
@@ -50,7 +54,7 @@
   @else if $btn-name == secondary {
     color: $btn-default-blue;
     background-color: $btn-white;
-    border-color: $btn-interaction-blue;
+    border-color:$btn-interaction-blue;
   }
   @else {
     @warn "You didn't enter the correct button action variable";

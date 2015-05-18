@@ -18,3 +18,10 @@
     @include btn-action(secondary);
   }
 }
+.dice-btn-dropdown {
+  @include btn(dropdown);
+  padding:13px 16px 10px 16px;
+  color:$form-font-color;
+  font-size:18px;
+  border-radius:2px;
+}
