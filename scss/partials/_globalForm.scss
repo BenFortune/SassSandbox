@@ -37,15 +37,18 @@
         border-color:$form-error-red;
       }
     }
-    .dropdown-menu{
-      top:170px;
-      left:15px;
-      color:$form-font-color;
-      border-radius:0 0 2px 2px;
-      border-top:0 none;
-      border-color: $border-default-gray;
-      li a:hover, li a:focus, li a:active {
-        background-color:$btn-interaction-blue;
+    .dropdown-container {
+      position:relative;
+      .dropdown-menu{
+        top:170px;
+        left:15px;
+        color:$form-font-color;
+        border-radius:0 0 2px 2px;
+        border-top:0 none;
+        border-color: $border-default-gray;
+        li a:hover, li a:focus, li a:active {
+          background-color:$btn-interaction-blue;
+        }
       }
     }
 }
