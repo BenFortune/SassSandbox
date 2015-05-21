@@ -7,18 +7,35 @@
     .form-control {
         border-color:$border-default-gray;
     }
-    .form-group-lg .form-control {
+    .form-group-lg {
+      .form-control {
         height:46px;
         @include border-radius(2px);
+      }
     }
-    .has-success .form-control {
-      border-color:#3C763D;
+    .has-success {
+      .control-label {
+        color:$form-success-green;
+      }
+      .form-control {
+        border-color:$form-success-green;
+      }
     }
-    .has-warning .form-control {
-      border-color:#8A6D3B;
+    .has-warning {
+      .control-label {
+        color:$form-warning-yellow;
+      }
+      .form-control {
+        border-color:$form-warning-yellow;
+      }
     }
-    .has-error .form-control {
-      border-color:#A94442;
+    .has-error {
+      .control-label {
+        color:$form-error-red;
+      }
+      .form-control {
+        border-color:$form-error-red;
+      }
     }
     .dropdown-menu{
       top:170px;
