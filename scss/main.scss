@@ -1,21 +1,24 @@
 /*  IMPORT TWITTER BOOTSTRAP  */
-@import "../bower_components/customer_club/assets/stylesheets/_bootstrap";
+@import '../bower_components/customer_club/assets/stylesheets/_bootstrap';
 
 /* GLOBAL STYLE PARTIALS */
-@import "partials/_globalVariables";
-@import "partials/_globalMixins";
-@import "partials/_globalHelpers";
-@import "partials/_globalLayout";
-@import "partials/_globalFonts";
-@import "partials/_globalButtons";
-@import "partials/_globalForm";
-@import "partials/_globalAlerts";
-@import "partials/_globalFloatLabel";
-@import "partials/_iconFonts";
+@import 'partials/_globalVariables';
+@import 'partials/_globalMixins';
+@import 'partials/_globalHelpers';
+@import 'partials/_globalLayout';
+@import 'partials/_globalFonts';
+@import 'partials/_globalButtons';
+@import 'partials/_globalForm';
+@import 'partials/_globalAlerts';
+@import 'partials/_globalFloatLabel';
+@import 'partials/_iconFonts';
 
 /*  PAGE SPECIFIC STYLES  */
-%dotted-border {border: 1px dotted #000;}
+%dotted-border
+{
+    border: 1px dotted #000;
+}
 
 // MESSING WITH INTERPOLATION
-$description: "awesome and stuff";
-@warn "Sass is #{$description}!";
+$description: 'awesome and stuff';
+@warn 'Sass is #{$description}!';

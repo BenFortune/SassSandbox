@@ -1,6 +1,7 @@
 module.exports = {
   'default': [],
   'main': [
-    'sass:main'
+    'sass:main',
+    'csscomb:scss'
   ]
 }

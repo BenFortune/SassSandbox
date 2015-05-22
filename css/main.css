@@ -6870,11 +6870,21 @@ h2 {
   -ms-border-radius: 2px;
   border-radius: 2px;
 }
+.dice-form .form-control-feedback {
+  height: 46px;
+  padding-top: 4px;
+  line-height: 46px;
+  border-radius: 0 2px 2px 0;
+}
 .dice-form .has-success .control-label {
   color: #6C6;
 }
 .dice-form .has-success .form-control {
   border-color: #6C6;
+}
+.dice-form .has-success .form-control-feedback {
+  color: #FFF;
+  background-color: #6C6;
 }
 .dice-form .has-warning .control-label {
   color: #FC0;
@@ -6882,11 +6892,19 @@ h2 {
 .dice-form .has-warning .form-control {
   border-color: #FC0;
 }
+.dice-form .has-warning .form-control-feedback {
+  color: #FFF;
+  background-color: #FC0;
+}
 .dice-form .has-error .control-label {
   color: #C00;
 }
 .dice-form .has-error .form-control {
   border-color: #C00;
+}
+.dice-form .has-error .form-control-feedback {
+  color: #FFF;
+  background-color: #C00;
 }
 .dice-form .dropdown-container {
   position: relative;

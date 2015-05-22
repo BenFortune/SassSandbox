@@ -13,12 +13,22 @@
         @include border-radius(2px);
       }
     }
+    .form-control-feedback {
+      height:46px;
+      padding-top:4px;
+      line-height:46px;
+      border-radius:0 2px 2px 0;
+    }
     .has-success {
       .control-label {
         color:$form-success-green;
       }
       .form-control {
         border-color:$form-success-green;
+      }
+      .form-control-feedback {
+        color:#FFF;
+        background-color:$form-success-green;
       }
     }
     .has-warning {
@@ -28,6 +38,10 @@
       .form-control {
         border-color:$form-warning-yellow;
       }
+      .form-control-feedback {
+        color:#FFF;
+        background-color:$form-warning-yellow;
+      }
     }
     .has-error {
       .control-label {
@@ -35,6 +49,10 @@
       }
       .form-control {
         border-color:$form-error-red;
+      }
+      .form-control-feedback {
+        color:#FFF;
+        background-color:$form-error-red;
       }
     }
     .dropdown-container {
