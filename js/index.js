@@ -7,23 +7,23 @@ $(function() {
     var showClass = "float-label";
 
     floatInput.on('focus', function() {
-      floatLabelHandler();
+      floatLabelHandler.call(floatLabel, 'something else');
     });
     floatInput.on('blur', function() {
-      floatLabelHandler();
+      floatLabelHandler.call(floatLabel, 'something else');
     });
     floatInput.on('keyup', function() {
       console.log("this is", this);
-      floatLabelHandler();
-    })
+      floatLabelHandler.call(floatLabel, 'something else');
+    });
 
     function floatLabelHandler() {
       if (!floatInput.val() || floatInput.val() === "") {
-        floatLabel.removeClass(onClass);
-        floatInput.removeClass(showClass);
+        this.removeClass(onClass);
+        this.next().removeClass(showClass);
       } else {
-        floatLabel.addClass(onClass);
-        floatInput.addClass(showClass);
+        this.addClass(onClass);
+        this.next().addClass(showClass);
       }
     }
 
