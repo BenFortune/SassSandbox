@@ -13,7 +13,6 @@ $(function() {
       floatLabelHandler.call(floatLabel, 'something else');
     });
     floatInput.on('keyup', function() {
-      console.log("this is", this);
       floatLabelHandler.call(floatLabel, 'something else');
     });
 
