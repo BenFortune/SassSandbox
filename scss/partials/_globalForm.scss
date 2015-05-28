@@ -57,9 +57,9 @@
     }
     .dropdown-container {
       position:relative;
+      margin-bottom:20px;
       .dropdown-menu{
-        top:170px;
-        left:15px;
+        margin-top:-2px;
         color:$form-font-color;
         border-radius:0 0 2px 2px;
         border-top:0 none;
