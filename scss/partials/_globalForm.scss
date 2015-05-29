@@ -69,4 +69,17 @@
         }
       }
     }
+    .select-container {
+      margin-bottom:20px;
+      li:hover, a:hover {
+        background-color:#6CF;
+      }
+      .dropdown-caret {
+        padding-top:18px;
+        padding-bottom:5px;
+      }
+      [class^="icon-filled-"]::before, [class*=" icon-filled-"]::before {
+        line-height:0;
+      }
+    }
 }

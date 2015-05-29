@@ -6921,6 +6921,19 @@ h2 {
 .dice-form .dropdown-container .dropdown-menu li a:hover, .dice-form .dropdown-container .dropdown-menu li a:focus, .dice-form .dropdown-container .dropdown-menu li a:active {
   background-color: #6CF;
 }
+.dice-form .select-container {
+  margin-bottom: 20px;
+}
+.dice-form .select-container li:hover, .dice-form .select-container a:hover {
+  background-color: #6CF;
+}
+.dice-form .select-container .dropdown-caret {
+  padding-top: 18px;
+  padding-bottom: 5px;
+}
+.dice-form .select-container [class^="icon-filled-"]::before, .dice-form .select-container [class*=" icon-filled-"]::before {
+  line-height: 0;
+}
 
 .dice-alert {
   color: #333;

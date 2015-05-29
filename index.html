@@ -31,18 +31,9 @@
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
           <h3>Form &amp; Input Group</h3>
           <form class="form-horizontal dice-form">
-            <div class="dropdown-container">
-              <button class="dice-btn-dropdown dropdown-toggle" data-toggle="dropdown">Select Something</button>
-              <ul class="dropdown-menu">
-                <li><a href="#">item 1</a></li>
-                <li><a href="#">item 2</a></li>
-                <li><a href="#">item 3</a></li>
-                <li><a href="#">item 4</a></li>
-              </ul>
-            </div>
-            <div class="btn-group btn-block">
-              <button class="btn dice-btn-dropdown dropdown-toggle">Select Multiples</button>
-              <button type="button" class=" btn dice-btn-dropdown dropdown-toggle" data-toggle="dropdown">
+            <div class="btn-group btn-block select-container">
+              <button class="btn dice-btn-dropdown dropdown-toggle" data-toggle="dropdown">Select One Item</button>
+              <button type="button" class="btn dice-btn-dropdown dropdown-toggle dropdown-caret" data-toggle="dropdown">
                 <span class="icon-filled-arrow-60"></span>
                 <span class="sr-only">Toggle Dropdown</span>
               </button>
@@ -51,6 +42,45 @@
                 <li><a href="#">item 2</a></li>
                 <li><a href="#">item 3</a></li>
                 <li><a href="#">item 4</a></li>
+              </ul>
+            </div>
+            <div class="btn-group btn-block select-container">
+              <button class="btn dice-btn-dropdown dropdown-toggle" data-toggle="dropdown">Select Multiples</button>
+              <button type="button" class="btn dice-btn-dropdown dropdown-toggle dropdown-caret" data-toggle="dropdown">
+                <span class="icon-filled-arrow-60"></span>
+                <span class="sr-only">Toggle Dropdown</span>
+              </button>
+              <ul class="dropdown-menu">
+                <li class="checkbox">
+                  <label>
+                    <input type="checkbox" value="">
+                    Item 1
+                  </label>
+                </li>
+                <li class="checkbox">
+                  <label>
+                    <input type="checkbox" value="">
+                    Item 2
+                  </label>
+                </li>
+                <li class="checkbox">
+                  <label>
+                    <input type="checkbox" value="">
+                    Item 3
+                  </label>
+                </li>
+                <li class="checkbox">
+                  <label>
+                    <input type="checkbox" value="">
+                    Item 4
+                  </label>
+                </li>
+                <li class="checkbox">
+                  <label>
+                    <input type="checkbox" value="">
+                    Item 5
+                  </label>
+                </li>
               </ul>
             </div>
             <div id="float-label" class="form-group form-group-lg">
