@@ -6934,6 +6934,9 @@ h2 {
 .dice-form .select-container [class^="icon-filled-"]::before, .dice-form .select-container [class*=" icon-filled-"]::before {
   line-height: 0;
 }
+.dice-form .select-container .multi-select li {
+  padding: 3px 20px;
+}
 
 .dice-alert {
   color: #333;

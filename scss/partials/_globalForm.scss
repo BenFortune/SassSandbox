@@ -81,5 +81,10 @@
       [class^="icon-filled-"]::before, [class*=" icon-filled-"]::before {
         line-height:0;
       }
+      .multi-select {
+        li {
+          padding:3px 20px;
+        }
+      }
     }
 }
