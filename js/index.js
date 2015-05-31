@@ -2,8 +2,9 @@ $(document).ready(function() {
 
 // Float Label
 function floatLabel() {
-  var floatLabel = $('#float-label label');
-  var floatInput = $('#float-label input');
+  var floatLabel = $('.float-label label');
+  var floatInput = $('.float-label input');
+  var inputArray = Array.prototype.slice.call(document.querySelectorAll('.float-label input'));
   var onClass = "float-label-on";
   var showClass = "float-label";
 
@@ -30,7 +31,25 @@ function floatLabel() {
 
 // Multi Select and Single Select Dropdown
 function selectDD() {
-  console.log("Select DD Initialized")
+  var toggleTrigger = $('.dropdown-toggle');
+  var toggleArray = Array.prototype.slice.call(document.querySelectorAll('.dropdown-toggle'));
+
+  toggleTrigger.on('click', function() {
+    getSelectType();
+  });
+
+  function getSelectType() {
+    toggleArray.forEach(function(el, index, array) {
+      if(toggleArray[index].hasAttribute('data-select-type') && toggleArray[index].getAttribute('data-select-type') === 'single') {
+        console.log("singles", el);
+      } else if (toggleArray[index].hasAttribute('data-select-type') && toggleArray[index].getAttribute('data-select-type') === 'multiple') {
+        console.log("multiples", el);
+      } else if (!toggleArray[index].hasAttribute('data-select-type')){
+        console.log("nothing", el);
+        return;
+      }
+    });
+  }
 }
 
 // Intiate Functions
