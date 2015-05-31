@@ -35,20 +35,34 @@ function selectDD() {
   var toggleArray = Array.prototype.slice.call(document.querySelectorAll('.dropdown-toggle'));
 
   toggleTrigger.on('click', function() {
-    getSelectType();
+    var that = this;
+    getSelectType.call(that, 'oneArg', 'twoArg');
   });
 
-  function getSelectType() {
-    toggleArray.forEach(function(el, index, array) {
-      if(toggleArray[index].hasAttribute('data-select-type') && toggleArray[index].getAttribute('data-select-type') === 'single') {
-        console.log("singles", el);
-      } else if (toggleArray[index].hasAttribute('data-select-type') && toggleArray[index].getAttribute('data-select-type') === 'multiple') {
-        console.log("multiples", el);
-      } else if (!toggleArray[index].hasAttribute('data-select-type')){
-        console.log("nothing", el);
-        return;
-      }
-    });
+  function getSelectType(button, arg1, arg2) {
+    if (this.hasAttribute('data-select-type') && this.getAttribute('data-select-type') === 'single') {
+      var that = this;
+      var clickableElements = $('.dropdown-menu li a');
+      clickableElements.on('click', function() {
+        that.innerHTML = this.innerHTML;
+      });
+    } else if (this.hasAttribute('data-select-type') && this.getAttribute('data-select-type') === 'multiple') {
+      console.log('multiple');
+    } else {
+      console.log('neither');
+      return;
+    }
+
+    // toggleArray.forEach(function(el, index, array) {
+    //   if(toggleArray[index].hasAttribute('data-select-type') && toggleArray[index].getAttribute('data-select-type') === 'single') {
+    //     console.log("singles", el);
+    //   } else if (toggleArray[index].hasAttribute('data-select-type') && toggleArray[index].getAttribute('data-select-type') === 'multiple') {
+    //     console.log("multiples", el);
+    //   } else if (!toggleArray[index].hasAttribute('data-select-type')){
+    //     console.log("nothing", el);
+    //     return;
+    //   }
+    // });
   }
 }
 
