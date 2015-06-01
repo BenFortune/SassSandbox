@@ -32,7 +32,6 @@ function floatLabel() {
 // Multi Select and Single Select Dropdown
 function selectDD() {
   var toggleTrigger = $('.dropdown-toggle');
-  var toggleArray = Array.prototype.slice.call(document.querySelectorAll('.dropdown-toggle'));
 
   toggleTrigger.on('click', function() {
     var that = this;
@@ -52,17 +51,6 @@ function selectDD() {
       console.log('neither');
       return;
     }
-
-    // toggleArray.forEach(function(el, index, array) {
-    //   if(toggleArray[index].hasAttribute('data-select-type') && toggleArray[index].getAttribute('data-select-type') === 'single') {
-    //     console.log("singles", el);
-    //   } else if (toggleArray[index].hasAttribute('data-select-type') && toggleArray[index].getAttribute('data-select-type') === 'multiple') {
-    //     console.log("multiples", el);
-    //   } else if (!toggleArray[index].hasAttribute('data-select-type')){
-    //     console.log("nothing", el);
-    //     return;
-    //   }
-    // });
   }
 }
 
