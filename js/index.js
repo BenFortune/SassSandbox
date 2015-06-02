@@ -46,7 +46,22 @@ function selectDD() {
         that.innerHTML = this.innerHTML;
       });
     } else if (this.hasAttribute('data-select-type') && this.getAttribute('data-select-type') === 'multiple') {
-      console.log('multiple');
+      var that = this;
+      var clickableElements = $('.dropdown-menu li input');
+      clickableElements.on('click', function() {
+        console.log("values are", this.getAttribute('value'));
+        syncItems();
+      });
+      function syncItems() {
+        var stuff = clickableElements.toArray();
+        stuff.forEach(function(el, index, array) {
+          if (clickableElements[index].getAttribute('checked') === true) {
+            console.log('yep');
+          } else {
+            console.log('nope');
+          }
+        });
+      }
     } else {
       console.log('neither');
       return;
