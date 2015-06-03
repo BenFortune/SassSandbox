@@ -1,3 +1,3 @@
 ##Sass Sandbox
 
-*This uses the Bootstrap framework*
+*This uses the Bootstrap front-end framework*
