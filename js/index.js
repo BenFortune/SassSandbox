@@ -48,24 +48,29 @@ function selectDD() {
     } else if (this.hasAttribute('data-select-type') && this.getAttribute('data-select-type') === 'multiple') {
       var that = this;
       var clickableElements = $('.dropdown-menu li input');
+      var valueArray = [];
       clickableElements.on('click', function() {
         console.log("values are", this.getAttribute('value'));
         syncItems();
       });
-      function syncItems() {
-        var stuff = clickableElements.toArray();
-        stuff.forEach(function(el, index, array) {
-          if (clickableElements[index].getAttribute('checked') === true) {
-            console.log('yep');
-          } else {
-            console.log('nope');
-          }
-        });
-      }
     } else {
       console.log('neither');
       return;
     }
+  }
+  
+  function syncItems() {
+    var stuff = clickableElements.toArray();
+    stuff.forEach(function(el, index, array) {
+      if (clickableElements.is(':checked')) {
+        var values = clickableElements.val();
+        console.log('values are', clickableElements.val());
+        var stuffVal = valueArray.push(values);
+        console.log("yep");
+      } else {
+        console.log('nope');
+      }
+    });
   }
 }
 
