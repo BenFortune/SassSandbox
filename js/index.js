@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 // Float Label
-function floatLabel() {
+(function floatLabel() {
   var floatLabel = $('.float-label label');
   var floatInput = $('.float-label input');
   var inputArray = Array.prototype.slice.call(document.querySelectorAll('.float-label input'));
@@ -27,10 +27,10 @@ function floatLabel() {
       this.next().addClass(showClass);
     }
   }
-}
+})();
 
 // Multi Select and Single Select Dropdown
-function selectDD() {
+(function selectDD() {
   var toggleTrigger = $('.dropdown-toggle');
 
   toggleTrigger.on('click', function() {
@@ -53,28 +53,24 @@ function selectDD() {
         console.log("values are", this.getAttribute('value'));
         syncItems();
       });
+      function syncItems() {
+        var stuff = clickableElements.toArray();
+        stuff.forEach(function(el, index, array) {
+          if (clickableElements.is(':checked')) {
+            var values = clickableElements.val();
+            console.log('values are', clickableElements.val());
+            var stuffVal = valueArray.push(values);
+            console.log("yep");
+          } else {
+            console.log('nope');
+          }
+        });
+      }
     } else {
       console.log('neither');
       return;
     }
   }
-  
-  function syncItems() {
-    var stuff = clickableElements.toArray();
-    stuff.forEach(function(el, index, array) {
-      if (clickableElements.is(':checked')) {
-        var values = clickableElements.val();
-        console.log('values are', clickableElements.val());
-        var stuffVal = valueArray.push(values);
-        console.log("yep");
-      } else {
-        console.log('nope');
-      }
-    });
-  }
-}
+})();
 
-// Intiate Functions
-floatLabel();
-selectDD();
 });
