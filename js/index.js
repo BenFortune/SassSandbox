@@ -2,29 +2,27 @@ $(document).ready(function() {
 
 // Float Label
 (function floatLabel() {
-  var floatLabel = $('.float-label label');
   var floatInput = $('.float-label input');
-  var inputArray = Array.prototype.slice.call(document.querySelectorAll('.float-label input'));
   var onClass = "float-label-on";
   var showClass = "float-label";
 
-  floatInput.on('focus', function() {
-    floatLabelHandler.call(floatLabel, 'something else');
+  floatInput.on('focus', function(e) {
+    floatLabelHandler.call(e.target, 'something else');
   });
-  floatInput.on('blur', function() {
-    floatLabelHandler.call(floatLabel, 'something else');
+  floatInput.on('blur', function(e) {
+    floatLabelHandler.call(e.target, 'something else');
   });
-  floatInput.on('keyup', function() {
-    floatLabelHandler.call(floatLabel, 'something else');
+  floatInput.on('keyup', function(e) {
+    floatLabelHandler.call(e.target, 'something else');
   });
 
   function floatLabelHandler() {
-    if (!floatInput.val() || floatInput.val() === "") {
-      this.removeClass(onClass);
-      this.next().removeClass(showClass);
+    if (!this.value || this.value === "") {
+      $(this).removeClass(showClass);
+      $(this).prev().removeClass(onClass);
     } else {
-      this.addClass(onClass);
-      this.next().addClass(showClass);
+      $(this).addClass(showClass);
+      $(this).prev().addClass(onClass);
     }
   }
 })();

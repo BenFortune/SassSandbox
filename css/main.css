@@ -6877,6 +6877,9 @@ h2 {
   line-height: 46px;
   border-radius: 0 2px 2px 0;
 }
+.dice-form .has-feedback .form-control-feedback {
+  top: 0;
+}
 .dice-form .has-success .control-label {
   color: #6C6;
 }

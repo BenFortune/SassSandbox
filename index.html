@@ -86,10 +86,31 @@
             <div class="form-group form-group-lg float-label">
               <div class="col-md-5 col-lg-5">
                 <label for="input-1" data-float-label>Input 1</label>
-                <input type="text" class="form-control" placeholder="Input 1">
+                <input type="text" name="input-1" class="form-control" placeholder="Input 1">
               </div>
             </div>
-            <div class="form-group form-group-lg has-feedback has-success">
+            <div class="form-group form-group-lg has-feedback has-success float-label">
+              <div class="col-md-5 col-lg-5">
+                <label for="input-2" class="float-label-on" data-float-label>Success Message Input</label>
+                <input type="text" name="input-2" class="form-control float-label" placeholder="Input 2" value="Success">
+                <span class="glyphicon form-control-feedback icon-filled-check-4"></span>
+              </div>
+            </div>
+            <div class="form-group form-group-lg has-feedback has-warning float-label">
+              <div class="col-md-5 col-lg-5">
+                <label for="input-2" class="float-label-on" data-float-label>Warning Message Input</label>
+                <input type="text" name="input-2" class="form-control float-label" placeholder="Input 2" value="Warning">
+                <span class="glyphicon form-control-feedback icon-filled-alert-1"></span>
+              </div>
+            </div>
+            <div class="form-group form-group-lg has-feedback has-error float-label">
+              <div class="col-md-5 col-lg-5">
+                <label for="input-2" class="float-label-on" data-float-label>Error Message Input</label>
+                <input type="text" name="input-2" class="form-control float-label" placeholder="Input 2" value="Error">
+                <span class="glyphicon form-control-feedback icon-filled-delete-2-1"></span>
+              </div>
+            </div>
+            <!-- <div class="form-group form-group-lg has-feedback has-success">
               <label class="col-sm-1 col-md-1 control-label">Success</label>
               <div class="col-sm-4 col-md-4">
                 <input type="text" class="form-control" />
@@ -109,7 +130,7 @@
                 <input type="text" class="form-control" />
                 <span class="glyphicon form-control-feedback icon-filled-delete-2-1"></span>
               </div>
-            </div>
+            </div> -->
           </form>
         </div>
       </div>
