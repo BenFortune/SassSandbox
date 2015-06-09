@@ -1,3 +1,5 @@
 ##Sass Sandbox
 
-*This uses the [Bootstrap front-end framework](https://github.com/twbs)*
+###3rd Party Components
+*[Bootstrap front-end framework](https://github.com/twbs)
+*[Bootstrap Slider](https://github.com/seiyria/bootstrap-slider)

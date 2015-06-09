@@ -1,5 +1,8 @@
 $(document).ready(function() {
 
+var mySlider = $("#slider").slider();
+    mySlider.slider('setValue', 8);
+
 // Float Label
 (function floatLabel() {
   var floatInput = $('.float-label input');
