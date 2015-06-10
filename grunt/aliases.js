@@ -1,7 +1,8 @@
 module.exports = {
   'default': [],
   'main': [
+    'csscomb:main',
     'sass:main',
-    'csscomb:scss'
+    'concat:main'
   ]
 }
