@@ -3,6 +3,7 @@ module.exports = {
   'main': [
     'csscomb:main',
     'sass:main',
-    'concat:main'
+    'concat:main',
+    'cssmin:main'
   ]
 }
