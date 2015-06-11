@@ -26,3 +26,9 @@
   font-weight:300;
   border-radius:2px;
 }
+.dice-btn-active {
+  @include btn(group-active);
+}
+.dice-btn-inactive {
+  @include btn(group-inactive);
+}

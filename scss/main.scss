@@ -19,6 +19,11 @@
     border: 1px dotted #000;
 }
 
+.slider
+{
+    margin-top: 20px;
+}
+
 // MESSING WITH INTERPOLATION
 $description: 'awesome and stuff';
 @warn 'Sass is #{$description}!';

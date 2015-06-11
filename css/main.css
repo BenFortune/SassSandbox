@@ -6856,6 +6856,16 @@ h2 {
   border-radius: 2px;
 }
 
+.dice-btn-active {
+  background-color: #FFF;
+  color: #069;
+}
+
+.dice-btn-inactive {
+  background-color: #CCC;
+  color: #FFF;
+}
+
 .dice-form {
   margin-top: 15px;
   margin-bottom: 15px;
@@ -7591,5 +7601,8 @@ input.float-label::-moz-placeholder {
 }
 
 /*  PAGE SPECIFIC STYLES  */
+.slider {
+  margin-top: 20px;
+}
 
 /*# sourceMappingURL=main.css.map */

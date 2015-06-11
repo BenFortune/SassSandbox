@@ -37,6 +37,14 @@
     background-color: $btn-white;
     border:1px solid $border-default-gray;
   }
+  @else if $btn-name == group-active {
+    background-color: $btn-white;
+    color: $btn-default-blue;
+  }
+  @else if $btn-name == group-inactive {
+    background-color: $btn-inactive-gray;
+    color: $btn-white;
+  }
   @else {
     @warn "You didn't enter the correct button variable";
   }
