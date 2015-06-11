@@ -2,16 +2,16 @@
 @import '../bower_components/customer_club/assets/stylesheets/_bootstrap';
 
 /* GLOBAL STYLE PARTIALS */
-@import 'partials/_globalVariables';
-@import 'partials/_globalMixins';
-@import 'partials/_globalHelpers';
-@import 'partials/_globalLayout';
-@import 'partials/_globalFonts';
-@import 'partials/_globalButtons';
-@import 'partials/_globalForm';
-@import 'partials/_globalAlerts';
-@import 'partials/_globalFloatLabel';
-@import 'partials/_iconFonts';
+@import 'partials/_global-variables';
+@import 'partials/_global-mixins';
+@import 'partials/_global-helpers';
+@import 'partials/_global-layout';
+@import 'partials/_global-fonts';
+@import 'partials/_global-buttons';
+@import 'partials/_global-form';
+@import 'partials/_global-alerts';
+@import 'partials/_global-float-label';
+@import 'partials/_icon-fonts';
 
 /*  PAGE SPECIFIC STYLES  */
 %dotted-border
