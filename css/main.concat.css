@@ -7106,11 +7106,24 @@ h2 {
 .dice-btn-active {
   background-color: #FFF;
   color: #069;
+  border-left: 0 none;
+  border-right: 0 none;
 }
 
 .dice-btn-inactive {
   background-color: #CCC;
   color: #FFF;
+  margin-left: 0;
+  border-left: 0 none;
+  border-right: 1px solid #FFF;
+}
+.dice-btn-inactive:last-child {
+  margin-left: 0;
+  border-right: 0 none;
+}
+
+.btn-group .btn + .btn, .btn-group .btn + .btn-group, .btn-group .btn-group + .btn, .btn-group .btn-group + .btn-group {
+  margin-left: 0;
 }
 
 .dice-form {
