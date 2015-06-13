@@ -63,15 +63,30 @@ var mySlider = $("#slider").slider();
             var stuffVal = valueArray.push(values);
             console.log("yep");
           } else {
-            console.log('nope');
           }
         });
       }
     } else {
-      console.log('neither');
       return;
     }
   }
+})();
+
+// FORM GROUP BUTTON CHANGE
+(function formBtnGroupChange() {
+  var channelBtn = $('.dice-btn-group button');
+
+  channelBtn.on('click', function(e) {
+    that = $(this);
+    e.preventDefault();
+    if (that.hasClass('dice-btn-inactive')) {
+      channelBtn.removeClass('dice-btn-active').addClass('dice-btn-inactive');
+      that.removeClass('dice-btn-inactive').addClass('dice-btn-active');
+    } else {
+      return;
+    }
+  });
+
 })();
 
 });
