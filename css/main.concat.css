@@ -7109,6 +7109,9 @@ h2 {
   border-left: 0 none;
   border-right: 0 none;
 }
+.dice-btn-active:hover, .dice-btn-active:focus, .dice-btn-active:active {
+  color: #6CF;
+}
 
 .dice-btn-inactive {
   background-color: #CCC;
@@ -7116,6 +7119,9 @@ h2 {
   margin-left: 0;
   border-left: 0 none;
   border-right: 1px solid #FFF;
+}
+.dice-btn-inactive:hover, .dice-btn-inactive:focus, .dice-btn-inactive:active {
+  color: #069;
 }
 .dice-btn-inactive:last-child {
   margin-left: 0;

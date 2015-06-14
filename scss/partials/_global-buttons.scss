@@ -30,12 +30,18 @@
   @include btn(group-active);
   border-left:0 none;
   border-right:0 none;
+  &:hover, &:focus, &:active {
+    color:$btn-interaction-blue;
+  }
 }
 .dice-btn-inactive {
   @include btn(group-inactive);
   margin-left:0;
   border-left:0 none;
   border-right:1px solid #FFF;
+  &:hover, &:focus, &:active {
+    color:$btn-default-blue;
+  }
   &:last-child {
     margin-left:0;
     border-right:0 none;
