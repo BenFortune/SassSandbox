@@ -4,6 +4,9 @@
     margin-top:15px;
     margin-bottom:15px;
     color:#555;
+    input {
+      cursor:pointer;
+    }
     .form-control {
         border-color:$border-default-gray;
     }
@@ -100,5 +103,41 @@
     .slider-selection {
       background-image:none;
       box-shadow:none;
+    }
+    .contact-form {
+      margin-left:0;
+      margin-right:0;
+      label {
+        display:inline-block;
+        height:46px;
+        margin-right:-15px;
+        padding-left:0;
+        padding-right:0;
+        color:$label-font-color;
+        font-weight:$main-font-boldness;
+        text-align:center;
+        background-color:#FFF;
+        border-left:1px solid #DDD;
+        border-top: 1px solid #DDD;
+        border-bottom:1px solid #DDD;
+      }
+      > div {
+        margin-right:0;
+        padding-left:0;
+        padding-right:0;
+        background-color:#FFF;
+        border-left: 0 none;
+        input {
+          border-left:0 none;
+          &.form-control {
+            box-shadow:none;
+          }
+          &:focus {
+            border-top:1px solid $btn-interaction-blue;
+            border-right:1px solid $btn-interaction-blue;
+            border-bottom:1px solid $btn-interaction-blue;
+          }
+        }
+      }
     }
 }
