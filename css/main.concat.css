@@ -7570,8 +7570,17 @@ h2 {
   box-shadow: none;
 }
 .dice-form .slider-selection {
+  background-color: #6CF;
   background-image: none;
   box-shadow: none;
+}
+.dice-form .slider-handle {
+  background-color: #FFF;
+  background-image: none;
+  border: 1px solid #DDD;
+}
+.dice-form .slider-track-high {
+  background-color: #CCC;
 }
 .dice-form .contact-form {
   margin-left: 0;
