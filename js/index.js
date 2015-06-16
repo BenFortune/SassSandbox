@@ -89,4 +89,12 @@ var mySlider = $("#slider").slider();
 
 })();
 
+(function checkboxCheck() {
+  var checkboxes = $('.dice-checkbox');
+
+  checkboxes.on('click', function(e) {
+    console.log('id is', e.target.id);
+  })
+})();
+
 });
