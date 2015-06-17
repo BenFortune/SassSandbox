@@ -91,10 +91,20 @@ var mySlider = $("#slider").slider();
 
 (function checkboxCheck() {
   var checkboxes = $('.dice-checkbox');
+  var realChecks = $('.bootstrap-checkbox');
+
+  realChecks.on('click', function() {
+    console.log("clicked");
+  })
 
   checkboxes.on('click', function(e) {
-    console.log('id is', e.target.id);
-  })
+    if ($('span').hasClass('icon-check-1')) {
+      console.log('yep');
+      $(this).removeClass('icon-check-1');
+    } else {
+      console.log('nope');
+    }
+  });
 })();
 
 });
