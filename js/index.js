@@ -89,20 +89,17 @@ var mySlider = $("#slider").slider();
 
 })();
 
+// CHECK BOX CHECKS
 (function checkboxCheck() {
   var checkboxes = $('.dice-checkbox');
   var realChecks = $('.bootstrap-checkbox');
 
-  realChecks.on('click', function() {
-    console.log("clicked");
-  })
-
   checkboxes.on('click', function(e) {
-    if ($('span').hasClass('icon-check-1')) {
-      console.log('yep');
-      $(this).removeClass('icon-check-1');
+    srcEl = $(e.target);
+    if (srcEl.hasClass('icon-check-1')) {
+      srcEl.removeClass('icon-check-1');
     } else {
-      console.log('nope');
+      srcEl.addClass('icon-check-1');
     }
   });
 })();

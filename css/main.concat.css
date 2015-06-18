@@ -8294,7 +8294,8 @@ input.float-label::-moz-placeholder {
 }
 
 /*  PAGE SPECIFIC STYLES  */
-.slider {
+.slider,
+.dice-checkbox-group {
   margin-top: 20px;
 }
 
