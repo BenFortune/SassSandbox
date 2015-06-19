@@ -89,7 +89,7 @@ var mySlider = $("#slider").slider();
 
 })();
 
-// CHECK BOX CHECKS
+// CUSTOM CHECKBOX CHECKS
 (function checkboxCheck() {
   var checkboxes = $('.dice-checkbox');
   var realChecks = $('.bootstrap-checkbox');
