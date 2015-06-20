@@ -1,4 +1,8 @@
+/// Here is the description
+/// On several lines if you will
 /// BOOTSTRAP OVERRIDES FOR COMMON FORM STYLES
+/// @author Ben Fortune
+/// @access public
 
 .dice-form {
     margin-top:15px;
@@ -149,7 +153,9 @@
         }
       }
     }
-    // CUSTOM CHECKBOXES
+    /// CUSTOM CHECKBOXES
+    /// @alias .checkbox-container
+    /// @author Ben Fortune
     .checkbox-container {
       position:relative;
       display:block;
