@@ -98,8 +98,10 @@ var mySlider = $("#slider").slider();
     srcEl = $(e.target);
     if (srcEl.hasClass('icon-check-1')) {
       srcEl.removeClass('icon-check-1');
+      srcEl.prev().removeAttr('checked');
     } else {
       srcEl.addClass('icon-check-1');
+      srcEl.prev().attr('checked', true);
     }
   });
 })();
