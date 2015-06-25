@@ -5,19 +5,16 @@
 /// @author Ben Fortune
 ////
 
-/// GLOBAL GRAY
 /// @group Global Colors
 $main-background-color: #F5F5F5;
-/// GLOBAL WARNING RED
 /// @group Global Colors
 $warning-red: #F2DEDE;
-/// GLOBAL WARNING YELLOW
 /// @group Global Colors
 $warning-yellow: #FCF8E3;
 
-/// FONTS AND FONT COLORS
-/// @group Global Fonts
+/// main font-stack
 $main-font-stack: sans-serif;
+/// main font color
 $main-font-color: #333;
 $main-font-boldness: 300;
 $header-font-stack: 'Roboto Condensed', sans-serif;
@@ -25,18 +22,15 @@ $secondary-font-color: #666;
 $form-font-color: #555;
 $label-font-color: #999;
 
-/// BUTTONS, LINKS AND VARIABLES
 /// @group Global Buttons
 $btn-default-blue: #069;
 $btn-white: #FFF;
 $btn-interaction-blue: #6CF;
 $btn-inactive-gray: #CCC;
 
-/// COMPONENT COLORS
 /// @group Global Component Colors
 $border-default-gray: #DDD;
 
-/// FORM VALIDATION STATES
 /// @group Global Form Validations
 $form-success-green: #6C6;
 $form-warning-yellow: #FC0;
