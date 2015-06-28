@@ -79,9 +79,9 @@ var mySlider = $("#slider").slider();
   channelBtn.on('click', function(e) {
     that = $(this);
     e.preventDefault();
-    if (that.hasClass('dice-btn-inactive')) {
-      channelBtn.removeClass('dice-btn-active').addClass('dice-btn-inactive');
-      that.removeClass('dice-btn-inactive').addClass('dice-btn-active');
+    if (that.hasClass('inactive')) {
+      channelBtn.removeClass('active').addClass('inactive');
+      that.removeClass('inactive').addClass('active');
     } else {
       return;
     }

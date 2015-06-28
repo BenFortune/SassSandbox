@@ -5,7 +5,7 @@ module.exports = {
       alias: true,
       watermark: true,
     },
-  }
+  },
   fileOnly: {
     src: 'scss/main.scss'
   },

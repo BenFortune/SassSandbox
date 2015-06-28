@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/*  IMPORT TWITTER BOOTSTRAP  */
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -7139,7 +7138,6 @@ button.close {
     display: none !important;
   }
 }
-/* GLOBAL STYLE PARTIALS */
 body {
   background-color: #F5F5F5;
 }
@@ -7201,27 +7199,27 @@ h2 {
   border-radius: 2px;
 }
 
-.dice-btn-active {
+.dice-btn-group .active {
   background-color: #FFF;
   color: #069;
   border-left: 0 none;
   border-right: 0 none;
+  box-shadow: none;
 }
-.dice-btn-active:hover, .dice-btn-active:focus, .dice-btn-active:active {
+.dice-btn-group .active:hover, .dice-btn-group .active:focus, .dice-btn-group .active:active {
   color: #6CF;
 }
-
-.dice-btn-inactive {
+.dice-btn-group .inactive {
   background-color: #CCC;
   color: #FFF;
   margin-left: 0;
   border-left: 0 none;
   border-right: 1px solid #FFF;
 }
-.dice-btn-inactive:hover, .dice-btn-inactive:focus, .dice-btn-inactive:active {
+.dice-btn-group .inactive:hover, .dice-btn-group .inactive:focus, .dice-btn-group .inactive:active {
   color: #069;
 }
-.dice-btn-inactive:last-child {
+.dice-btn-group .inactive:last-child {
   margin-left: 0;
   border-right: 0 none;
 }
@@ -8046,7 +8044,6 @@ input.float-label::-moz-placeholder {
   content: "\e035";
 }
 
-/*  PAGE SPECIFIC STYLES  */
 .slider,
 .dice-checkbox-group {
   margin-top: 20px;

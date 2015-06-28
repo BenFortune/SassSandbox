@@ -26,27 +26,32 @@
   font-weight:300;
   border-radius:2px;
 }
-.dice-btn-active {
-  @include btn(group-active);
-  border-left:0 none;
-  border-right:0 none;
-  &:hover, &:focus, &:active {
-    color:$btn-interaction-blue;
-  }
-}
-.dice-btn-inactive {
-  @include btn(group-inactive);
-  margin-left:0;
-  border-left:0 none;
-  border-right:1px solid #FFF;
-  &:hover, &:focus, &:active {
-    color:$btn-default-blue;
-  }
-  &:last-child {
-    margin-left:0;
+.dice-btn-group {
+  .active {
+    @include btn(group-active);
+    border-left:0 none;
     border-right:0 none;
+    box-shadow:none;
+    &:hover, &:focus, &:active {
+      color:$btn-interaction-blue;
+    }
+  }
+  .inactive {
+    @include btn(group-inactive);
+    margin-left:0;
+    border-left:0 none;
+    border-right:1px solid #FFF;
+    &:hover, &:focus, &:active {
+      color:$btn-default-blue;
+    }
+    &:last-child {
+      margin-left:0;
+      border-right:0 none;
+    }
   }
 }
+
+// BOOTSTRAP OVERRIDES
 .btn-group .btn + .btn, .btn-group .btn + .btn-group, .btn-group .btn-group + .btn, .btn-group .btn-group + .btn-group{
   margin-left:0;
 }
