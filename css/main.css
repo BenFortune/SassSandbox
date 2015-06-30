@@ -7403,6 +7403,13 @@ h2 {
 .dice-form .checkbox-container .dice-checkbox .icon-check-1 {
   font-size: 18px;
 }
+.dice-form .radio-container {
+  position: relative;
+  display: block;
+  margin-bottom: 5px;
+  padding-top: 9px;
+  font-weight: 300;
+}
 
 .dice-alert {
   color: #333;
