@@ -7445,6 +7445,10 @@ h2 {
   font-weight: 300;
   border-radius: 2px;
 }
+.dice-btn-dropdown:nth-child(1) {
+  border-right: 0 none;
+  border-radius: 2px 0 0 2px;
+}
 
 .dice-btn-group .active {
   background-color: #FFF;
