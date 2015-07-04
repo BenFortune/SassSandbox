@@ -43,9 +43,17 @@ $(document).ready(function() {
       if (this.hasAttribute('data-select-type') && this.getAttribute('data-select-type') === 'single') {
         var that = this;
         var clickableElements = $('.dropdown-menu li a');
-        clickableElements.on('click', function() {
-          that.innerHTML = this.innerHTML;
-        });
+
+        if ($(this).hasClass('dropdown-caret')) {
+          var btnText = $(that).prev();
+          clickableElements.on('click', function() {
+            btnText.text(this.innerHTML);
+          });
+        } else {
+          clickableElements.on('click', function() {
+            that.innerHTML = this.innerHTML;
+          });
+        }
       } else if (this.hasAttribute('data-select-type') && this.getAttribute('data-select-type') === 'multiple') {
         var that = this;
         var clickableElements = $('.dropdown-menu li input');
