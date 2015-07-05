@@ -68,9 +68,8 @@ $(document).ready(function() {
             if (clickableElements.is(':checked')) {
               var values = clickableElements.val();
               console.log('values are', clickableElements.val());
-              var stuffVal = valueArray.push(values);
-              console.log("yep");
-            } else {
+              var stuffVal = valueArray.push(clickableElements.val());
+              console.log("yep", stuffVal);
             }
           });
         }
