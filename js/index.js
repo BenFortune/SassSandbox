@@ -33,6 +33,7 @@ $(document).ready(function() {
   // Multi Select and Single Select Dropdown
   (function selectDD() {
     var toggleTrigger = $('.dropdown-toggle');
+    var valueAll = '';
 
     toggleTrigger.on('click', function() {
       var that = this;
@@ -57,24 +58,23 @@ $(document).ready(function() {
       } else if (this.hasAttribute('data-select-type') && this.getAttribute('data-select-type') === 'multiple') {
         var that = this;
         var clickableElements = $('.dropdown-menu li input');
-        var valueArray = [];
         clickableElements.on('click', function() {
           console.log("values are", this.getAttribute('value'));
-          syncItems();
+          if (valueArray === undefined) {
+            var valueArray = [];
+            var value = this.getAttribute('value');
+            var values = valueArray.push(value);
+            var valueAll = valueArray;
+            $('#multipleBtn').text(valueArray);
+          } else {
+            var value = this.getAttribute('value');
+            var values = valueAll.push(' ' + value);
+            $('#multipleBtn').text(valueAll);
+          }
         });
-        function syncItems() {
-          var stuff = clickableElements.toArray();
-          stuff.forEach(function(el, index, array) {
-            if (clickableElements.is(':checked')) {
-              var values = clickableElements.val();
-              console.log('values are', clickableElements.val());
-              var stuffVal = valueArray.push(clickableElements.val());
-              console.log("yep", stuffVal);
-            }
-          });
-        }
-      } else {
-        return;
+
+        // TODO resuable function for multiple values
+
       }
     }
   }());
@@ -84,13 +84,11 @@ $(document).ready(function() {
     var channelBtn = $('.dice-btn-group button');
 
     channelBtn.on('click', function(e) {
-      that = $(this);
+      var that = $(this);
       e.preventDefault();
       if (that.hasClass('inactive')) {
         channelBtn.removeClass('active').addClass('inactive');
         that.removeClass('inactive').addClass('active');
-      } else {
-        return;
       }
     });
 
