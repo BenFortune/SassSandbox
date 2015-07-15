@@ -7661,6 +7661,13 @@ h2 {
   padding-top: 9px;
   font-weight: 300;
 }
+.dice-form .dice-tag {
+  display: inline-block;
+  padding: 5px 15px;
+  background: #FFF;
+  border: 1px solid #DDD;
+  border-radius: 20px;
+}
 
 .dice-alert {
   color: #333;

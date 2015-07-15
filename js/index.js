@@ -33,7 +33,6 @@ $(document).ready(function() {
   // Multi Select and Single Select Dropdown
   (function selectDD() {
     var toggleTrigger = $('.dropdown-toggle');
-    var valueAll = '';
 
     toggleTrigger.on('click', function() {
       var that = this;
@@ -56,6 +55,7 @@ $(document).ready(function() {
           });
         }
       } else if (this.hasAttribute('data-select-type') && this.getAttribute('data-select-type') === 'multiple') {
+        // TODO Finish Multi Select Work
         var that = this;
         var clickableElements = $('.dropdown-menu li input');
         clickableElements.on('click', function() {
@@ -64,12 +64,14 @@ $(document).ready(function() {
             var valueArray = [];
             var value = this.getAttribute('value');
             var values = valueArray.push(value);
-            var valueAll = valueArray;
+            var allValues = valueArray;
             $('#multipleBtn').text(valueArray);
+            console.log('all values', allValues);
           } else {
+            console.log('all values where defined', allValues);
             var value = this.getAttribute('value');
-            var values = valueAll.push(' ' + value);
-            $('#multipleBtn').text(valueAll);
+            var values = allValues.push(' ' + value);
+            $('#multipleBtn').text(valueArray);
           }
         });
 

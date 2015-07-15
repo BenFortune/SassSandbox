@@ -196,4 +196,11 @@
       padding-top:9px;
       font-weight:300;
     }
+    .dice-tag {
+      display:inline-block;
+      padding:5px 15px;
+      background:$dice-white;
+      border:1px solid $border-default-gray;
+      border-radius:20px;
+    }
 }

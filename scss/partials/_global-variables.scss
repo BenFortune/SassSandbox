@@ -1,22 +1,9 @@
-////
-/// This is a poster comment.
-/// It will apply annotations to all items from file.
-/// @group Global Variables
-/// @author Ben Fortune
-////
-
-/// GLOBAL GRAY
-/// @group Global Colors
 $main-background-color: #F5F5F5;
-/// GLOBAL WARNING RED
-/// @group Global Colors
 $warning-red: #F2DEDE;
-/// GLOBAL WARNING YELLOW
-/// @group Global Colors
 $warning-yellow: #FCF8E3;
+$dice-white: #FFF;
 
-/// FONTS AND FONT COLORS
-/// @group Global Fonts
+// FONTS AND FONT COLORS
 $main-font-stack: sans-serif;
 $main-font-color: #333;
 $main-font-boldness: 300;
@@ -25,19 +12,16 @@ $secondary-font-color: #666;
 $form-font-color: #555;
 $label-font-color: #999;
 
-/// BUTTONS, LINKS AND VARIABLES
-/// @group Global Buttons
+// BUTTONS, LINKS AND VARIABLES
 $btn-default-blue: #069;
 $btn-white: #FFF;
 $btn-interaction-blue: #6CF;
 $btn-inactive-gray: #CCC;
 
-/// COMPONENT COLORS
-/// @group Global Component Colors
+// COMPONENT COLORS
 $border-default-gray: #DDD;
 
-/// FORM VALIDATION STATES
-/// @group Global Form Validations
+// FORM VALIDATION STATES
 $form-success-green: #6C6;
 $form-warning-yellow: #FC0;
 $form-error-red: #C00;
