@@ -7385,6 +7385,10 @@ button.close {
     display: none !important;
   }
 }
+.remove {
+  display: none !important;
+}
+
 body {
   background-color: #F5F5F5;
 }
@@ -7664,9 +7668,25 @@ h2 {
 .dice-form .dice-tag {
   display: inline-block;
   padding: 5px 15px;
+  line-height: 1;
   background: #FFF;
   border: 1px solid #DDD;
   border-radius: 20px;
+}
+.dice-form .dice-tag span {
+  display: inline-block;
+  margin-left: 3px;
+  padding: 3px 5px 1px 5px;
+  color: #FFF;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1;
+  cursor: pointer;
+  background-color: #CCC;
+  border-radius: 8px;
+}
+.dice-form .dice-tag span:hover, .dice-form .dice-tag span:focus, .dice-form .dice-tag span:active {
+  background-color: #E5E5E5;
 }
 
 .dice-alert {

@@ -113,4 +113,13 @@ $(document).ready(function() {
     });
   }());
 
+  // REMOVE/HIDE TAGS
+  (function removeTags() {
+    var tags = $('.dice-tag');
+    tags.on('click', function(e) {
+      srcEl = $(e.target);
+      srcEl.parent().addClass('remove');
+    })
+  }());
+
 });
