@@ -218,5 +218,28 @@
           background-color:#E5E5E5;
         }
       }
+      &.add {
+      	margin-left: 0px;
+      	color: #069;
+      	line-height: 1;
+      	border-color: #069;
+      	padding-left: 10px;
+        cursor: pointer;
+        &:hover, &:focus, &:active {
+          border-color:#6CF;
+        }
+        span {
+        	margin-left: 0px;
+        	margin-right: 3px;
+        	color: #069;
+        	background-color: #FFF;
+        	border: 1px solid #069;
+        	font-size: 14px;
+        	padding-top: 1px;
+          &:hover, &:focus, &:active {
+            border-color:#6CF;
+          }
+        }
+      }
     }
 }
