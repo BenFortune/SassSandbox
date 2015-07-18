@@ -7708,9 +7708,6 @@ h2 {
   font-size: 14px;
   padding-top: 1px;
 }
-.dice-form .dice-tag.add span:hover, .dice-form .dice-tag.add span:focus, .dice-form .dice-tag.add span:active {
-  border-color: #6CF;
-}
 
 .dice-alert {
   color: #333;

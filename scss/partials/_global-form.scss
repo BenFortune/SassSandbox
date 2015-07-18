@@ -207,7 +207,7 @@
         display: inline-block;
       	margin-left: 3px;
       	padding: 3px 5px 1px 5px;
-      	color: #FFF;
+      	color:$dice-white;
       	font-size: 13px;
       	font-weight: 300;
         line-height: 1;
@@ -220,25 +220,22 @@
       }
       &.add {
       	margin-left: 0px;
-      	color: #069;
-      	line-height: 1;
-      	border-color: #069;
-      	padding-left: 10px;
+      	color:$btn-default-blue;
+      	line-height:1;
+      	border-color:$btn-default-blue;
+      	padding-left:10px;
         cursor: pointer;
         &:hover, &:focus, &:active {
-          border-color:#6CF;
+          border-color:$btn-interaction-blue;
         }
         span {
         	margin-left: 0px;
         	margin-right: 3px;
-        	color: #069;
-        	background-color: #FFF;
-        	border: 1px solid #069;
+        	color:$btn-default-blue;
+        	background-color:$dice-white;
+        	border: 1px solid $btn-default-blue;
         	font-size: 14px;
         	padding-top: 1px;
-          &:hover, &:focus, &:active {
-            border-color:#6CF;
-          }
         }
       }
     }
