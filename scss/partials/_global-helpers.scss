@@ -3,6 +3,15 @@
     display: table;
     clear: both;
 }
+.show-block {
+  display:block !important;
+}
+.show-inline-block {
+  display:inline-block;
+}
+.show-inline {
+  display:inline;
+}
 .remove {
   display:none !important;
 }

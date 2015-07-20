@@ -7138,6 +7138,18 @@ button.close {
     display: none !important;
   }
 }
+.show-block {
+  display: block !important;
+}
+
+.show-inline-block {
+  display: inline-block;
+}
+
+.show-inline {
+  display: inline;
+}
+
 .remove {
   display: none !important;
 }
@@ -7420,6 +7432,7 @@ h2 {
 }
 .dice-form .dice-tag {
   display: inline-block;
+  position: relative;
   padding: 5px 15px;
   line-height: 1;
   background: #FFF;
@@ -7460,6 +7473,17 @@ h2 {
   border: 1px solid #069;
   font-size: 14px;
   padding-top: 1px;
+}
+.dice-form .dice-tag.add input {
+  position: absolute;
+  display: block;
+  width: 100%;
+  margin: 0px;
+  border: 0px none;
+  left: 0px;
+  top: 3px;
+  border-radius: 20px;
+  padding: 5px 10px;
 }
 
 .dice-alert {
