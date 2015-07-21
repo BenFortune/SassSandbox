@@ -119,11 +119,32 @@ $(document).ready(function() {
     tags.on('click', function(e) {
       srcEl = $(e.target);
       if ($(this).hasClass('add')) {
-          $(this).find('.remove').removeClass('remove').focus();
+          return;
       } else {
         srcEl.parent().addClass('remove');
       }
     });
+  }());
+
+  // ADD TAGS
+  (function addTags() {
+    var tags = $('.dice-tag.add');
+    var inputs = $('.dice-tag.add input');
+    tags.on('click', function() {
+      $(this).find('.remove').removeClass('remove').focus();
+    });
+    inputs.on('blur', function() {
+      console.log("blurred");
+      var value = $(this).val();
+      if (value) {
+        console.log("value is", value);
+        $(this).parent().text(value).removeClass('add').append('<span>X</span>');
+      } else {
+        console.log("value sucks", value);
+        $(this).addClass('remove');
+        return;
+      }
+    })
   }());
 
 });
