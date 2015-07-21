@@ -119,7 +119,7 @@ $(document).ready(function() {
     tags.on('click', function(e) {
       srcEl = $(e.target);
       if ($(this).hasClass('add')) {
-        return;
+          $(this).find('.remove').removeClass('remove').focus();
       } else {
         srcEl.parent().addClass('remove');
       }
