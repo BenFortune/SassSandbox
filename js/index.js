@@ -122,6 +122,7 @@ $(document).ready(function() {
           return;
       } else {
         srcEl.parent().addClass('remove');
+        addNewTag($(this).parent());
       }
     });
   }());
@@ -134,17 +135,21 @@ $(document).ready(function() {
       $(this).find('.remove').removeClass('remove').focus();
     });
     inputs.on('blur', function() {
-      console.log("blurred");
       var value = $(this).val();
       if (value) {
-        console.log("value is", value);
         $(this).parent().text(value).removeClass('add').append('<span>X</span>');
       } else {
-        console.log("value sucks", value);
-        $(this).addClass('remove');
         return;
       }
     })
   }());
+
+  // ADDING NEW TAGS
+  function addNewTag(tagInput) {
+    var parentEl = $(tagInput).parent();
+    console.log('parent element is', parentEl);
+    var addTagMarkup = '<div class="dice-tag add"><span>+</span>Add Tag <input class="remove" type="text" placeholder="Add Tag"></div>'
+    $(tagInput).append(addTagMarkup);
+  };
 
 });
