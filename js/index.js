@@ -146,10 +146,13 @@ $(document).ready(function() {
 
   // ADDING NEW TAGS
   function addNewTag(tagInput) {
-    var parentEl = $(tagInput).parent();
-    console.log('parent element is', parentEl);
-    var addTagMarkup = '<div class="dice-tag add"><span>+</span>Add Tag <input class="remove" type="text" placeholder="Add Tag"></div>'
-    $(tagInput).append(addTagMarkup);
+    var targetEl = $(tagInput).children().last();
+    if ($(targetEl).hasClass('add')) {
+      return;
+    } else {
+      var addTagMarkup = '<div class="dice-tag add"><span>+</span>Add Tag <input class="remove" type="text" placeholder="Add Tag"></div>'
+      $(tagInput).append(addTagMarkup);
+    }
   };
 
 });
