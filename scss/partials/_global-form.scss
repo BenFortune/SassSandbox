@@ -251,4 +251,19 @@
         }
       }
     }
+    .dice-input.add {
+      color:$btn-default-blue;
+      cursor: pointer;
+      span {
+        margin-left: 0px;
+        margin-right:3px;
+        padding:1px 3px;
+      	line-height:1;
+      	border:1px solid $btn-default-blue;
+        border-radius:3px;
+        &:hover, &:focus, &:active {
+          border-color:$btn-interaction-blue;
+        }
+      }
+    }
 }

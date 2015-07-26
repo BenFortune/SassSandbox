@@ -138,6 +138,7 @@ $(document).ready(function() {
       var value = $(this).val();
       if (value) {
         $(this).parent().text(value).removeClass('add').append('<span>X</span>');
+        addNewTag($(this));
       } else {
         return;
       }
@@ -146,6 +147,8 @@ $(document).ready(function() {
 
   // ADDING NEW TAGS
   function addNewTag(tagInput) {
+    var checkEl = $(tagInput).parent().attr('class');
+    console.log('check el is', checkEl);
     var targetEl = $(tagInput).children().last();
     if ($(targetEl).hasClass('add')) {
       return;

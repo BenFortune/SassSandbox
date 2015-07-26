@@ -7485,6 +7485,21 @@ h2 {
   border-radius: 20px;
   padding: 5px 10px;
 }
+.dice-form .dice-input.add {
+  color: #069;
+  cursor: pointer;
+}
+.dice-form .dice-input.add span {
+  margin-left: 0px;
+  margin-right: 3px;
+  padding: 1px 3px;
+  line-height: 1;
+  border: 1px solid #069;
+  border-radius: 3px;
+}
+.dice-form .dice-input.add span:hover, .dice-form .dice-input.add span:focus, .dice-form .dice-input.add span:active {
+  border-color: #6CF;
+}
 
 .dice-alert {
   color: #333;
