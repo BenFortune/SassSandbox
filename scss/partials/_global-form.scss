@@ -254,6 +254,10 @@
     .dice-input.add {
       color:$btn-default-blue;
       cursor: pointer;
+      &:hover, &:focus, &:active {
+        color: $btn-interaction-blue;
+        border-color:$btn-interaction-blue;
+      }
       span {
         margin-left: 0px;
         margin-right:3px;
@@ -262,6 +266,7 @@
       	border:1px solid $btn-default-blue;
         border-radius:3px;
         &:hover, &:focus, &:active {
+          color: $btn-interaction-blue;
           border-color:$btn-interaction-blue;
         }
       }

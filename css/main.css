@@ -7489,6 +7489,10 @@ h2 {
   color: #069;
   cursor: pointer;
 }
+.dice-form .dice-input.add:hover, .dice-form .dice-input.add:focus, .dice-form .dice-input.add:active {
+  color: #6CF;
+  border-color: #6CF;
+}
 .dice-form .dice-input.add span {
   margin-left: 0px;
   margin-right: 3px;
@@ -7498,6 +7502,7 @@ h2 {
   border-radius: 3px;
 }
 .dice-form .dice-input.add span:hover, .dice-form .dice-input.add span:focus, .dice-form .dice-input.add span:active {
+  color: #6CF;
   border-color: #6CF;
 }
 
