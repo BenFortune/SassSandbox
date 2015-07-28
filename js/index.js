@@ -140,6 +140,8 @@ $(document).ready(function() {
         var parentEl = $(this).parent().parent();
         $(this).parent().text(value).removeClass('add').append('<span>X</span>');
         addNewTag(parentEl);
+        addTags();
+        removeTags();
       } else {
         return;
       }
