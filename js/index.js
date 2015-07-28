@@ -137,7 +137,9 @@ $(document).ready(function() {
     inputs.on('blur', function() {
       var value = $(this).val();
       if (value) {
+        var parentEl = $(this).parent().parent();
         $(this).parent().text(value).removeClass('add').append('<span>X</span>');
+        addNewTag(parentEl);
       } else {
         return;
       }
