@@ -141,7 +141,6 @@ $(document).ready(function() {
         $(this).parent().text(value).removeClass('add').append('<span>X</span>');
         addNewTag(parentEl);
         addTags();
-        removeTags();
       } else {
         return;
       }
