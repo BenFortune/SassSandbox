@@ -144,7 +144,7 @@ $(document).ready(function() {
       } else {
         return;
       }
-    })
+    });
   }());
 
   // ADDING NEW TAGS
