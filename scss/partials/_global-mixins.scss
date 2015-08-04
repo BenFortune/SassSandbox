@@ -45,6 +45,17 @@
     background-color: $btn-inactive-gray;
     color: $btn-white;
   }
+  @else if $btn-name == toggle-on {
+    background-color: $form-success-green;
+    color: $btn-white;
+    border-color: $form-success-green;
+  }
+  @else if $btn-name == toggle-off {
+    background-color: $form-warning-yellow;
+    color: $btn-white;
+    border-color: $form-warning-yellow;
+
+  }
   @else {
     @warn "You didn't enter the correct button variable";
   }

@@ -7508,6 +7508,18 @@ h2 {
 .dice-form .dice-toggle .toggle.btn {
   min-width: 60px;
   min-height: 32px;
+  border-radius: 20px;
+  border-color: #DDD;
+}
+.dice-form .dice-toggle .toggle-on {
+  background-color: #6C6;
+  color: #FFF;
+  border-color: #6C6;
+}
+.dice-form .dice-toggle .toggle-off {
+  background-color: #FC0;
+  color: #FFF;
+  border-color: #FC0;
 }
 
 .dice-alert {

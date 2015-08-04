@@ -275,6 +275,14 @@
       .toggle.btn {
         min-width:60px;
         min-height:32px;
+        border-radius:20px;
+        border-color:$border-default-gray;
+      }
+      .toggle-on {
+        @include btn(toggle-on);
+      }
+      .toggle-off {
+        @include btn(toggle-off);
       }
     }
 }
