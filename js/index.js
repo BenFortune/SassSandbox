@@ -82,7 +82,7 @@ $(document).ready(function() {
   }());
 
   // FORM GROUP BUTTON CHANGE
-  (function formBtnGroupChange() {
+    (function formBtnGroupChange() {
     var channelBtn = $('.dice-btn-group button');
 
     channelBtn.on('click', function(e) {
@@ -94,10 +94,10 @@ $(document).ready(function() {
       }
     });
 
-  }());
+    }());
 
-  // CUSTOM CHECKBOX CHECKS
-  (function checkboxCheck() {
+    // CUSTOM CHECKBOX CHECKS
+    (function checkboxCheck() {
     var checkboxes = $('.dice-checkbox');
     var realChecks = $('.bootstrap-checkbox');
 
@@ -111,10 +111,10 @@ $(document).ready(function() {
         srcEl.prev().attr('checked', true);
       }
     });
-  }());
+    }());
 
-  // REMOVE/HIDE TAGS
-  (function removeTags() {
+    // REMOVE/HIDE TAGS
+    (function removeTags() {
     var tags = $('.dice-tag');
     tags.on('click', function(e) {
       srcEl = $(e.target);
@@ -125,10 +125,10 @@ $(document).ready(function() {
         addNewTag($(this).parent());
       }
     });
-  }());
+    }());
 
-  // ADD TAGS
-  (function addTags() {
+    // ADD TAGS
+    (function addTags() {
     var tags = $('.dice-tag.add');
     var inputs = $('.dice-tag.add input');
     tags.on('click', function() {
@@ -145,10 +145,10 @@ $(document).ready(function() {
         return;
       }
     });
-  }());
+    }());
 
-  // ADDING NEW TAGS
-  function addNewTag(tagInput) {
+    // ADDING NEW TAGS
+    function addNewTag(tagInput) {
     var targetEl = $(tagInput).children().last();
     if ($(targetEl).hasClass('add')) {
       return;
@@ -156,6 +156,10 @@ $(document).ready(function() {
       var addTagMarkup = '<div class="dice-tag add"><span>+</span>Add Tag <input class="remove" type="text" placeholder="Add Tag"></div>'
       $(tagInput).append(addTagMarkup);
     }
-  };
+    };
+    (function addInputs() {
+        
+    }());
+    
 
 });
