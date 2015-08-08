@@ -7486,6 +7486,8 @@ h2 {
   padding: 5px 10px;
 }
 .dice-form .dice-input-add {
+  margin-top: 15px;
+  margin-bottom: 15px;
   color: #069;
   cursor: pointer;
 }

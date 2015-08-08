@@ -252,6 +252,8 @@
       }
     }
     .dice-input-add {
+      margin-top: 15px;
+      margin-bottom: 15px;
       color:$btn-default-blue;
       cursor: pointer;
       &:hover, &:focus, &:active {
