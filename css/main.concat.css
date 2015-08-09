@@ -7770,6 +7770,9 @@ h2 {
   color: #FFF;
   border-color: #FC0;
 }
+.dice-form .dice-toggle .toggle-handle {
+  border-radius: 20px;
+}
 
 .dice-alert {
   color: #333;

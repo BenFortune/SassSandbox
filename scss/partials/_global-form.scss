@@ -286,5 +286,8 @@
       .toggle-off {
         @include btn(toggle-off);
       }
+      .toggle-handle {
+        border-radius: 20px;
+      }
     }
 }
