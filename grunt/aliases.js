@@ -3,10 +3,13 @@ module.exports = {
   'sassdoc': [
     'sassdoc:fileOnly'
   ],
-  'main': [
-    'csscomb:main',
-    'sass:main',
-    'concat:main',
-    'cssmin:main'
+  'css': [
+    'csscomb:css',
+    'sass:css',
+    'concat:css',
+    'cssmin:css'
+  ],
+  'js': [
+    'concat:js',
   ]
 }

@@ -1,5 +1,5 @@
 module.exports = {
-  main: {
+  css: {
     files: {
       'scss/main.scss': 'scss/main.scss'
     }

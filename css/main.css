@@ -7513,17 +7513,23 @@ h2 {
   border-radius: 20px;
   border-color: #DDD;
 }
+.dice-form .dice-toggle .toggle-group {
+  width: 156%;
+}
 .dice-form .dice-toggle .toggle-on {
+  width: 50%;
   background-color: #6C6;
   color: #FFF;
   border-color: #6C6;
 }
 .dice-form .dice-toggle .toggle-off {
+  width: 50%;
   background-color: #FC0;
   color: #FFF;
   border-color: #FC0;
 }
 .dice-form .dice-toggle .toggle-handle {
+  text-align: left;
   border-radius: 20px;
 }
 

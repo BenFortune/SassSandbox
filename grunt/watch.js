@@ -3,7 +3,7 @@ module.exports = {
     spawn: false,
     livereload: true,
   },
-  main: {
+  css: {
     files: ['scss/main.scss'],
     tasks: ['main'],
   }

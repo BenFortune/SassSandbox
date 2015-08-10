@@ -274,20 +274,27 @@
       }
     }
     .dice-toggle {
+    
       .toggle.btn {
         min-width:60px;
         min-height:32px;
         border-radius:20px;
         border-color:$border-default-gray;
       }
+      .toggle-group {
+        width:156%;
+      }
       .toggle-on {
+        width:50%;
         @include btn(toggle-on);
       }
       .toggle-off {
+        width:50%;
         @include btn(toggle-off);
       }
       .toggle-handle {
-        border-radius: 20px;
+        text-align:left;
+        border-radius:20px;
       }
     }
 }

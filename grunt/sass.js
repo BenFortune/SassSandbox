@@ -2,7 +2,7 @@ module.exports = {
   options: {
     style: 'expanded'
   },
-  main: {
+  css: {
     files: {
       'css/main.css': 'scss/main.scss'
     }

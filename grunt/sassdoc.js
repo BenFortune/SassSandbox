@@ -9,7 +9,7 @@ module.exports = {
   fileOnly: {
     src: 'scss/main.scss'
   },
-  main: {
+  css: {
     src: 'scss/**/*.scss'
   }
 }

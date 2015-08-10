@@ -4,7 +4,7 @@ module.exports = {
     compact: true,
     config: '.scss-lint.yml',
   },
-  main: {
+  css: {
     files: {
       'scss/main.scss': 'scss/main.scss'
     }
