@@ -1,5 +1,11 @@
 module.exports = {
-  'default': [],
+  'default': [
+    'csscomb:css',
+    'sass:css',
+    'concat:css',
+    'cssmin:css',
+    'concat:js'
+  ],
   'sassdoc': [
     'sassdoc:fileOnly'
   ],
@@ -10,6 +16,6 @@ module.exports = {
     'cssmin:css'
   ],
   'js': [
-    'concat:js',
+    'concat:js'
   ]
 }
