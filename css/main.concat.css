@@ -7865,6 +7865,49 @@ h2 {
   text-align: left;
   border-radius: 20px;
 }
+.dice-form .dice-toggle-wrapper {
+  position: relative;
+  height: 30px;
+}
+.dice-form .dice-toggle-wrapper input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.dice-form .dice-toggle-wrapper .dice-toggle-control {
+  display: inline-block;
+  height: 30px;
+  position: relative;
+  z-index: 1;
+  padding: 5px 35px 5px 10px;
+  background-color: #FFF;
+  border: 1px solid #DDD;
+  border-radius: 20px;
+}
+.dice-form .dice-toggle-wrapper .dice-toggle-control.on {
+  color: #FFF;
+  background-color: #6C6;
+}
+.dice-form .dice-toggle-wrapper .dice-toggle-control.off {
+  padding: 5px 10px 5px 35px;
+  color: #FFF;
+  background-color: #FC0;
+}
+.dice-form .dice-toggle-wrapper .dice-toggle-control.off .dice-toggle-trigger {
+  left: 0;
+}
+.dice-form .dice-toggle-wrapper .dice-toggle-control .dice-toggle-trigger {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  width: 30px;
+  height: 28px;
+  background-color: #F5F5F5;
+  border: 1px solid #DDD;
+  border-radius: 20px;
+}
 
 .dice-alert {
   color: #333;

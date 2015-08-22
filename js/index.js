@@ -165,6 +165,24 @@ $(document).ready(function() {
             checkboxCheck();
         });
     }());
+  
+    (function diceToggle() {
+		// Initialize default status
+    	var diceToggle = $('.dice-toggle-control');
+		var diceToggleLabel = $('.dice-toggle-label');
+		diceToggle.addClass('on');
+		
+		// Click event 
+		diceToggle.on('click', function() {
+	 		if ($(this).hasClass('on')) {
+				$(this).removeClass('on').addClass('off');
+				diceToggleLabel.text('Off');
+			} else {
+				$(this).removeClass('off').addClass('on');	
+				diceToggleLabel.text('On');
+			}
+		})
+    }());
     
 
 });

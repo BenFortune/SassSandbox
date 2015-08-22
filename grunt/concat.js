@@ -12,7 +12,6 @@ module.exports = {
       'bower_components/jquery/dist/jquery.js',
       'bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
       'bower_components/seiyria-bootstrap-slider/js/bootstrap-slider.js',
-      'bower_components/bootstrap-toggle/js/bootstrap2-toggle.js'
     ],
     dest: 'js/site.js'
   }
