@@ -7682,6 +7682,30 @@ input.float-label::-moz-placeholder {
   color: transparent;
 }
 
+.dice-modal .modal-content {
+  border-radius: 4px;
+}
+.dice-modal .modal-header {
+  padding: 15px 30px;
+  background-color: #DDDDDD;
+  border-radius: 4px 4px 0 0;
+}
+.dice-modal .modal-header h4 {
+  font: italic 300 24px/1.5 "Roboto Condensed", sans-serif;
+}
+.dice-modal .modal-header .close {
+  margin-top: 8px;
+}
+.dice-modal .modal-body {
+  background-color: #F5F5F5;
+  font-size: 16px;
+  padding: 30px;
+}
+.dice-modal .modal-footer {
+  border-top: none;
+  padding: 15px 30px;
+}
+
 @font-face {
   font-family: 'Icons';
   src: url("../fonts/icon.eot");
