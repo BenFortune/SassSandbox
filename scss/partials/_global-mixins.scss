@@ -1,104 +1,107 @@
-//  PAGE LAYOUT
-@mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-     -moz-border-radius: $radius;
-      -ms-border-radius: $radius;
-          border-radius: $radius;
-}
-//  END PAGE LAYOUT
+	//  PAGE LAYOUT
+	@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	 -moz-border-radius: $radius;
+	  -ms-border-radius: $radius;
+		  border-radius: $radius;
+	}
+	//  END PAGE LAYOUT
 
-//  H1-H6 ELEMENTS
-@mixin header-text {
-    font: {
-        family: $header-font-stack;
-        weight: 500;
-        style: italic;
-    }
-}
-//  END H1-H6 ELEMENTS
+	//  H1-H6 ELEMENTS
+	@mixin header-text {
+		font: {
+			family: $header-font-stack;
+			weight: 500;
+			style: italic;
+		}
+	}
+	//  END H1-H6 ELEMENTS
 
-//  BUTTONS, LINKS AND VARIABLES
-@mixin btn($btn-name) {
-  @if $btn-name == link {
-    color: $btn-default-blue;
-    text-decoration:none;
-  }
-  @else if $btn-name == primary {
-    color: $btn-white;
-    background-color: $btn-default-blue;
-    border-color: $btn-default-blue;
-  }
-  @else if $btn-name == secondary {
-    color: $btn-default-blue;
-    background-color: $btn-white;
-    border-color: $btn-default-blue;
-  }
-  @else if $btn-name == dropdown {
-    background-color: $btn-white;
-    border:1px solid $border-default-gray;
-  }
-  @else if $btn-name == group-active {
-    background-color: $btn-white;
-    color: $btn-default-blue;
-  }
-  @else if $btn-name == group-inactive {
-    background-color: $btn-inactive-gray;
-    color: $btn-white;
-  }
-  @else if $btn-name == toggle-on {
-    background-color: $form-success-green;
-    color: $btn-white;
-    border-color: $form-success-green;
-  }
-  @else if $btn-name == toggle-off {
-    background-color: $form-warning-yellow;
-    color: $btn-white;
-    border-color: $form-warning-yellow;
+	//  BUTTONS, LINKS AND VARIABLES
+	@mixin btn($btn-name) {
+		@if $btn-name == link {
+			color: $btn-default-blue;
+			text-decoration:none;
+		}
+		@else if $btn-name == link-white {
+			background-color: $btn-white;
+		}
+		@else if $btn-name == primary {
+			color: $btn-white;
+			background-color: $btn-default-blue;
+			border-color: $btn-default-blue;
+		}
+		@else if $btn-name == secondary {
+			color: $btn-default-blue;
+			background-color: $btn-white;
+			border-color: $btn-default-blue;
+		}
+		@else if $btn-name == dropdown {
+			background-color: $btn-white;
+			border:1px solid $border-default-gray;
+		}
+		@else if $btn-name == group-active {
+			background-color: $btn-white;
+			color: $btn-default-blue;
+		}
+		@else if $btn-name == group-inactive {
+			background-color: $btn-inactive-gray;
+			color: $btn-white;
+		}
+		@else if $btn-name == toggle-on {
+			background-color: $form-success-green;
+			color: $btn-white;
+			border-color: $form-success-green;
+		}
+		@else if $btn-name == toggle-off {
+			background-color: $form-warning-yellow;
+			color: $btn-white;
+			border-color: $form-warning-yellow;
 
-  }
-  @else {
-    @warn "You didn't enter the correct button variable";
-  }
-}
-@mixin btn-action($btn-name) {
-  @if $btn-name == link {
-    color: $btn-interaction-blue;
-    text-decoration:underline;
-  }
-  @else if $btn-name == primary {
-    color: $btn-white;
-    background-color: $btn-interaction-blue;
-    border-color: $btn-interaction-blue;
-  }
-  @else if $btn-name == secondary {
-    color: $btn-default-blue;
-    background-color: $btn-white;
-    border-color:$btn-interaction-blue;
-  }
-  @else {
-    @warn "You didn't enter the correct button action variable";
-  }
-}
-//  END BUTTONS AND LINKS
+		}
+		@else {
+			@warn "You didn't enter the correct button variable";
+		}
+	}
+	@mixin btn-action($btn-name) {
+		@if $btn-name == link {
+			color: $btn-interaction-blue;
+			text-decoration:underline;
+		}
+		@else if $btn-name == primary {
+			color: $btn-white;
+			background-color: $btn-interaction-blue;
+			border-color: $btn-interaction-blue;
+		}
+		@else if $btn-name == secondary {
+			color: $btn-default-blue;
+			background-color: $btn-white;
+			border-color:$btn-interaction-blue;
+		}
+		@else {
+			@warn "You didn't enter the correct button action variable";
+		}
+	}
+	//  END BUTTONS AND LINKS
 
-// FORMS AND INPUTS
-// END FORMS AND INPUTS
+	// FORMS AND INPUTS
+	// END FORMS AND INPUTS
 
-// MEDIA QUERIES
-@mixin wider-than($point) {
-  @if $point == large {
-    @media screen and (min-width: 1024px) { @content; }
-  }
-  @else if $point == medium {
-    @media screen and (min-width: 800px) { @content; }
-  }
-  @else if $point == small {
-    @media screen and (min-width: 600px) { @content; }
-  }
-  @else {
-    @media screen and (min-width: $point) { @content; }
-  }
-}
+	// TODO -- MEDIA QUERY WORK
+	@mixin wider-than($point) {
+	@if $point == large {
+	@media screen and (min-width: 1024px) { @content; }
+	}
+	@else if $point == medium {
+	@media screen and (min-width: 800px) { @content; }
+	}
+	@else if $point == small {
+	@media screen and (min-width: 600px) { @content; }
+	}
+	@else {
+	@media screen and (min-width: $point) { @content; }
+	}
+	}
 // END MEDIA QUERIES
 
 //== Media queries breakpoints

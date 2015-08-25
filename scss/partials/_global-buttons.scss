@@ -1,22 +1,28 @@
 // BOOTSTRAP OVERRIDES FOR COMMMON BUTTON AND LINK STYLES
 
 .dice-btn-link {
-  @include btn(link);
-  &:hover, &:focus, &:active {
-    @include btn-action(link);
-  }
+	@include btn(link);
+	&:hover, &:focus, &:active {
+		@include btn-action(link);
+	}
+}
+.dice-btn-link-white {
+	@include btn(link-white);
+	&:hover, &:focus, &:active {
+		@include btn-action(link);
+	}
 }
 .dice-btn {
-  @include btn(primary);
-  &:hover, &:focus, &:active {
-    @include btn-action(primary);
-  }
+	@include btn(primary);
+	&:hover, &:focus, &:active {
+		@include btn-action(primary);
+	}
 }
 .dice-btn-secondary {
-  @include btn(secondary);
-  &:hover, &:focus, &:active {
-    @include btn-action(secondary);
-  }
+	@include btn(secondary);
+	&:hover, &:focus, &:active {
+    	@include btn-action(secondary);
+  	}
 }
 .dice-btn-dropdown {
   @include btn(dropdown);
