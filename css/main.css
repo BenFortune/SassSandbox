@@ -7157,6 +7157,9 @@ button.close {
 body {
   background-color: #F5F5F5;
 }
+body .dice-container {
+  padding: 2em;
+}
 
 body {
   color: #333;
@@ -7184,6 +7187,7 @@ h2 {
 }
 
 .dice-btn-link-white {
+  color: #069;
   background-color: #FFF;
 }
 .dice-btn-link-white:hover, .dice-btn-link-white:focus, .dice-btn-link-white:active {

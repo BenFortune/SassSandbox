@@ -24,6 +24,7 @@
 			text-decoration:none;
 		}
 		@else if $btn-name == link-white {
+			color: $btn-default-blue;
 			background-color: $btn-white;
 		}
 		@else if $btn-name == primary {
