@@ -7516,6 +7516,14 @@ h2 {
   text-decoration: underline;
 }
 
+.dice-btn-link-white {
+  background-color: #FFF;
+}
+.dice-btn-link-white:hover, .dice-btn-link-white:focus, .dice-btn-link-white:active {
+  color: #6CF;
+  text-decoration: underline;
+}
+
 .dice-btn {
   color: #FFF;
   background-color: #069;
