@@ -26,6 +26,11 @@
     margin-top: 20px;
 }
 
+.component-group
+{
+    margin: 10px;
+}
+
 /// Messing with Interpolation
 $description: 'awesome and stuff';
 @warn 'Sass is #{$description}!';
