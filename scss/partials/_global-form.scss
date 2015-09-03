@@ -33,38 +33,38 @@
     }
     .has-success {
       .control-label {
-        color:$form-success-green;
+        color:$dice-success-green;
       }
       .form-control {
-        border-color:$form-success-green;
+        border-color:$dice-success-green;
       }
       .form-control-feedback {
         color:#FFF;
-        background-color:$form-success-green;
+        background-color:$dice-success-green;
       }
     }
     .has-warning {
       .control-label {
-        color:$form-warning-yellow;
+        color:$dice-warning-yellow;
       }
       .form-control {
-        border-color:$form-warning-yellow;
+        border-color:$dice-warning-yellow;
       }
       .form-control-feedback {
         color:#FFF;
-        background-color:$form-warning-yellow;
+        background-color:$dice-warning-yellow;
       }
     }
     .has-error {
       .control-label {
-        color:$form-error-red;
+        color:$dice-error-red;
       }
       .form-control {
-        border-color:$form-error-red;
+        border-color:$dice-error-red;
       }
       .form-control-feedback {
         color:#FFF;
-        background-color:$form-error-red;
+        background-color:$dice-error-red;
       }
     }
     .dropdown-container {

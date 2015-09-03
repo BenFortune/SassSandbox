@@ -50,14 +50,14 @@
 			color: $btn-white;
 		}
 		@else if $btn-name == toggle-on {
-			background-color: $form-success-green;
+			background-color: $dice-success-green;
 			color: $btn-white;
-			border-color: $form-success-green;
+			border-color: $dice-success-green;
 		}
 		@else if $btn-name == toggle-off {
-			background-color: $form-warning-yellow;
+			background-color: $dice-warning-yellow;
 			color: $btn-white;
-			border-color: $form-warning-yellow;
+			border-color: $dice-warning-yellow;
 
 		}
 		@else {
