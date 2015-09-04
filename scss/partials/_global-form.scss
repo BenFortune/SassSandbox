@@ -317,12 +317,12 @@
 			border-radius:20px;
 			&.on {
 				color:#FFF;
-				background-color: $form-success-green;
+				background-color: $dice-success-green;
 			}
 			&.off {
 				padding:5px 10px 5px 35px;
 				color: #FFF;
-				background-color: $form-warning-yellow;
+				background-color: $dice-warning-yellow;
 				.dice-toggle-trigger {
 					left:0;
 				}
