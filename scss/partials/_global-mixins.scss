@@ -90,18 +90,18 @@
 
 	// TODO -- MEDIA QUERY WORK
 	@mixin wider-than($point) {
-	@if $point == large {
-	@media screen and (min-width: 1024px) { @content; }
-	}
-	@else if $point == medium {
-	@media screen and (min-width: 800px) { @content; }
-	}
-	@else if $point == small {
-	@media screen and (min-width: 600px) { @content; }
-	}
-	@else {
-	@media screen and (min-width: $point) { @content; }
-	}
+		@if $point == large {
+			@media screen and (min-width: 1024px) { @content; }
+		}
+		@else if $point == medium {
+			@media screen and (min-width: 800px) { @content; }
+		}
+		@else if $point == small {
+			@media screen and (min-width: 600px) { @content; }
+		}
+		@else {
+			@media screen and (min-width: $point) { @content; }
+		}
 	}
 // END MEDIA QUERIES
 
