@@ -21,47 +21,59 @@
 .dice-btn-secondary {
 	@include btn(secondary);
 	&:hover, &:focus, &:active {
-    	@include btn-action(secondary);
-  	}
+		@include btn-action(secondary);
+	}
 }
 .dice-btn-dropdown {
-  @include btn(dropdown);
-  padding:13px 16px 10px 16px;
-  color:$form-font-color;
-  font-size:18px;
-  font-weight:300;
-  border-radius:2px;
-  &:nth-child(1){
-    border-right:0 none;
-    border-radius:2px 0 0 2px;
-  }
+	@include btn(dropdown);
+	padding:13px 16px 10px 16px;
+	color:$form-font-color;
+	font-size:18px;
+	font-weight:300;
+	border-radius:2px;
+	&:nth-child(1) {
+		border-right:0 none;
+		border-radius:2px 0 0 2px;
+	}
 }
+.dice-btn-group-tab {
+	.active {
+		@include btn(group-active);
+		border-left:0 none;
+		border-right:0 none;
+		box-shadow:none;
+		&:hover, &:focus, &:active {
+			color:$btn-interaction-blue;
+		}
+	}
+	.inactive {
+		@include btn(group-inactive);
+		margin-left:0;
+		border-left:0 none;
+		border-right:1px solid #FFF;
+		&:hover, &:focus, &:active {
+			color:$btn-default-blue;
+		}
+		&:last-child {
+			margin-left:0;
+			border-right:0 none;
+		}
+	}
+}
+
 .dice-btn-group {
-  .active {
-    @include btn(group-active);
-    border-left:0 none;
-    border-right:0 none;
-    box-shadow:none;
-    &:hover, &:focus, &:active {
-      color:$btn-interaction-blue;
-    }
-  }
-  .inactive {
-    @include btn(group-inactive);
-    margin-left:0;
-    border-left:0 none;
-    border-right:1px solid #FFF;
-    &:hover, &:focus, &:active {
-      color:$btn-default-blue;
-    }
-    &:last-child {
-      margin-left:0;
-      border-right:0 none;
-    }
-  }
+	button {
+		i {
+			font-size: 16px;
+		}
+	}
+	button:nth-child(even) {
+		border-left:0 none;
+		border-right:0 none;
+	}
 }
 
 // BOOTSTRAP OVERRIDES
 .btn-group .btn + .btn, .btn-group .btn + .btn-group, .btn-group .btn-group + .btn, .btn-group .btn-group + .btn-group{
-  margin-left:0;
+	margin-left:0;
 }

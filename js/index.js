@@ -83,7 +83,7 @@ $(document).ready(function() {
 
   // FORM GROUP BUTTON CHANGE
     (function formBtnGroupChange() {
-        var channelBtn = $('.dice-btn-group button');
+        var channelBtn = $('.dice-btn-group-tab button');
 
         channelBtn.on('click', function(e) {
           var that = $(this);
@@ -156,7 +156,7 @@ $(document).ready(function() {
           $(tagInput).append(addTagMarkup);
         }
     };
-    
+
     (function addNewInput() {
         var inputGroup = $('.dice-input-group');
         var addBtn = $('.dice-input-add');
@@ -165,25 +165,25 @@ $(document).ready(function() {
             checkboxCheck();
         });
     }());
-  
+
     (function diceToggle() {
 		// Initialize default status
     	var diceToggle = $('.dice-toggle-control');
 		var diceToggleLabel = $('.dice-toggle-label');
 		diceToggle.addClass('on');
-		
-		// Click event 
+
+		// Click event
 		diceToggle.on('click', function() {
 	 		if ($(this).hasClass('on')) {
 				$(this).removeClass('on').addClass('off');
 				diceToggleLabel.text('Off');
 			} else {
-				$(this).removeClass('off').addClass('on');	
+				$(this).removeClass('off').addClass('on');
 				diceToggleLabel.text('On');
 			}
 		})
     }());
-    
+
 	// Initialize tooltips
 	$(function () {
 		$('[data-toggle="tooltip"]').tooltip()
