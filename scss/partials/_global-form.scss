@@ -5,299 +5,299 @@
 /// @access public
 
 .dice-form {
-    margin-top:15px;
-    margin-bottom:15px;
-    color:#555;
-    input {
-      cursor:pointer;
-    }
-    .form-control {
-        border-color:$border-default-gray;
-    }
-    .form-group-lg {
-      .form-control {
-        height:46px;
-        @include border-radius(2px);
-      }
-    }
-    .form-control-feedback {
-      height:46px;
-      padding-top:4px;
-      line-height:46px;
-      border-radius:0 2px 2px 0;
-    }
-    .has-feedback {
-      .form-control-feedback {
-        top:0;
-      }
-    }
-    .has-success {
-      .control-label {
-        color:$dice-success-green;
-      }
-      .form-control {
-        border-color:$dice-success-green;
-      }
-      .form-control-feedback {
-        color:#FFF;
-        background-color:$dice-success-green;
-      }
-    }
-    .has-warning {
-      .control-label {
-        color:$dice-warning-yellow;
-      }
-      .form-control {
-        border-color:$dice-warning-yellow;
-      }
-      .form-control-feedback {
-        color:#FFF;
-        background-color:$dice-warning-yellow;
-      }
-    }
-    .has-error {
-      .control-label {
-        color:$dice-error-red;
-      }
-      .form-control {
-        border-color:$dice-error-red;
-      }
-      .form-control-feedback {
-        color:#FFF;
-        background-color:$dice-error-red;
-      }
-    }
-    .dropdown-container {
-      position:relative;
-      margin-bottom:20px;
-      .dropdown-menu{
-        margin-top:-2px;
-        color:$form-font-color;
-        border-radius:0 0 2px 2px;
-        border-top:0 none;
-        border-color: $border-default-gray;
-        li a:hover, li a:focus, li a:active {
-          background-color:$btn-interaction-blue;
-        }
-      }
-    }
-    .select-container {
-      margin-bottom:20px;
-      li:hover, a:hover {
-        background-color:#6CF;
-      }
-      .dropdown-caret {
-        padding-top:18px;
-        padding-bottom:5px;
-      }
-      [class^="icon-filled-"]::before, [class*=" icon-filled-"]::before {
-        line-height:0;
-      }
-      .multi-select {
-        li {
-          padding:3px 20px;
-        }
-      }
-    }
-    .slider-track {
-      background-color:#FFF;
-      background-image:none;
-      box-shadow:none;
-    }
-    .slider-selection {
-      background-color:#6CF;
-      background-image:none;
-      box-shadow:none;
-    }
-    .slider-handle {
-      background-color:#FFF;
-      background-image:none;
-      border:1px solid #DDD;
-    }
-    .slider-track-high {
-      background-color:#CCC;
-    }
-    .contact-form {
-      margin-left:0;
-      margin-right:0;
-      label {
-        display:inline-block;
-        height:46px;
-        margin-right:-15px;
-        padding-left:0;
-        padding-right:0;
-        color:$label-font-color;
-        font-weight:$main-font-boldness;
-        text-align:center;
-        background-color:#FFF;
-        border-left:1px solid #DDD;
-        border-top: 1px solid #DDD;
-        border-bottom:1px solid #DDD;
-      }
-      > div {
-        margin-right:0;
-        padding-left:0;
-        padding-right:0;
-        background-color:#FFF;
-        border-left: 0 none;
-        input {
-          border-left:0 none;
-          &.form-control {
-            box-shadow:none;
-          }
-          &:focus {
-            border-top:1px solid $btn-interaction-blue;
-            border-right:1px solid $btn-interaction-blue;
-            border-bottom:1px solid $btn-interaction-blue;
-          }
-        }
-      }
-    }
-    /// CUSTOM CHECKBOXES
-    .checkbox-container {
-      position:relative;
-      display:block;
-      margin-bottom:5px;
-      padding-top:9px;
-      text-indent:30px;
-      font-weight:300;
-      .bootstrap-checkbox {
-        position:absolute;
-        z-index:-1;
-        opacity:0;
-      }
-      .dice-checkbox {
-        display:block;
-        position:absolute;
-        width:25px;
-        height:25px;
-        top:5px;
-        left:0;
-        padding-top:3px;
-        padding-left:3px;
-        text-indent:0;
-        color:#069;
-        font-size:18px;
-        background-color:#FFF;
-        border:1px solid #DDD;
-        &:hover {
-          cursor:pointer;
-        }
-        .icon-check-1 {
-          font-size:18px;
-        }
-      }
-    }
-    /// CUSTOM RADIO BUTTONS
-    .radio-container {
-      position:relative;
-      display:block;
-      margin-bottom:5px;
-      padding-top:9px;
-      font-weight:300;
-    }
-    .dice-tag {
-      display:inline-block;
-      position: relative;
-      padding:5px 15px;
-      line-height:1;
-      background:$dice-white;
-      border:1px solid $border-default-gray;
-      border-radius:20px;
-      span {
-        display: inline-block;
-      	margin-left: 3px;
-      	padding: 3px 5px 1px 5px;
-      	color:$dice-white;
-      	font-size: 13px;
-      	font-weight: 300;
-        line-height: 1;
-        cursor:pointer;
-      	background-color: #CCC;
-      	border-radius: 8px;
-        &:hover, &:focus, &:active {
-          background-color:#E5E5E5;
-        }
-      }
-      &.add {
-      	margin-left: 0px;
-      	color:$btn-default-blue;
-      	line-height:1;
-      	border-color:$btn-default-blue;
-      	padding-left:10px;
-        cursor: pointer;
-        &:hover, &:focus, &:active {
-          border-color:$btn-interaction-blue;
-        }
-        span {
-        	margin-left: 0px;
-        	margin-right: 3px;
-        	color:$btn-default-blue;
-        	background-color:$dice-white;
-        	border: 1px solid $btn-default-blue;
-        	font-size: 14px;
-        	padding-top: 1px;
-        }
-        input {
-        	position: absolute;
-        	display: block;
-        	width: 100%;
-        	margin: 0px;
-        	border: 0px none;
-        	left: 0px;
-        	top: 3px;
-        	border-radius: 20px;
-        	padding: 5px 10px;
-        }
-      }
-    }
-    .dice-input-add {
-      margin-top: 15px;
-      margin-bottom: 15px;
-      color:$btn-default-blue;
-      cursor: pointer;
-      &:hover, &:focus, &:active {
-        color: $btn-interaction-blue;
-        border-color:$btn-interaction-blue;
-      }
-      span {
-        margin-left: 0px;
-        margin-right:3px;
-        padding:1px 3px;
-      	line-height:1;
-      	border:1px solid $btn-default-blue;
-        border-radius:3px;
-        &:hover, &:focus, &:active {
-          color: $btn-interaction-blue;
-          border-color:$btn-interaction-blue;
-        }
-      }
-    }
-    .dice-toggle {
-    
-      .toggle.btn {
-        min-width:60px;
-        min-height:32px;
-        border-radius:20px;
-        border-color:$border-default-gray;
-      }
-      .toggle-group {
-        width:156%;
-      }
-      .toggle-on {
-        width:50%;
-        @include btn(toggle-on);
-      }
-      .toggle-off {
-        width:50%;
-        @include btn(toggle-off);
-      }
-      .toggle-handle {
-        text-align:left;
-        border-radius:20px;
-      }
-    }
-	
+	margin-top:15px;
+	margin-bottom:15px;
+	color:#555;
+	input {
+		cursor:pointer;
+	}
+	.form-control {
+		border-color:$border-default-gray;
+	}
+	.form-group-lg {
+		.form-control {
+			height:46px;
+			@include border-radius(2px);
+		}
+	}
+	.form-control-feedback {
+		height:46px;
+		padding-top:4px;
+		line-height:46px;
+		border-radius:0 2px 2px 0;
+	}
+	.has-feedback {
+		.form-control-feedback {
+			top:0;
+		}
+	}
+	.has-success {
+		.control-label {
+			color:$dice-success-green;
+		}
+		.form-control {
+			border-color:$dice-success-green;
+		}
+		.form-control-feedback {
+			color:#FFF;
+			background-color:$dice-success-green;
+		}
+	}
+	.has-warning {
+		.control-label {
+			color:$dice-warning-yellow;
+		}
+		.form-control {
+			border-color:$dice-warning-yellow;
+		}
+		.form-control-feedback {
+			color:#FFF;
+			background-color:$dice-warning-yellow;
+		}
+	}
+	.has-error {
+		.control-label {
+			color:$dice-error-red;
+		}
+		.form-control {
+			border-color:$dice-error-red;
+		}
+		.form-control-feedback {
+			color:#FFF;
+			background-color:$dice-error-red;
+		}
+	}
+	.dropdown-container {
+		position:relative;
+		margin-bottom:20px;
+		.dropdown-menu {
+			margin-top:-2px;
+			color:$form-font-color;
+			border-radius:0 0 2px 2px;
+			border-top:0 none;
+			border-color: $border-default-gray;
+			li a:hover, li a:focus, li a:active {
+				background-color:$btn-interaction-blue;
+			}
+		}
+	}
+	.select-container {
+		margin-bottom:20px;
+		li:hover, a:hover {
+			background-color:#6CF;
+		}
+		.dropdown-caret {
+			padding-top:18px;
+			padding-bottom:5px;
+		}
+		[class^="icon-filled-"]::before, [class*=" icon-filled-"]::before {
+			line-height:0;
+		}
+		.multi-select {
+			li {
+				padding:3px 20px;
+			}
+		}
+	}
+	.slider-track {
+		background-color:#FFF;
+		background-image:none;
+		box-shadow:none;
+	}
+	.slider-selection {
+		background-color:#6CF;
+		background-image:none;
+		box-shadow:none;
+	}
+	.slider-handle {
+		background-color:#FFF;
+		background-image:none;
+		border:1px solid #DDD;
+	}
+	.slider-track-high {
+		background-color:#CCC;
+	}
+	.contact-form {
+		margin-left:0;
+		margin-right:0;
+		label {
+			display:inline-block;
+			height:46px;
+			margin-right:-15px;
+			padding-left:0;
+			padding-right:0;
+			color:$label-font-color;
+			font-weight:$main-font-boldness;
+			text-align:center;
+			background-color:#FFF;
+			border-left:1px solid #DDD;
+			border-top: 1px solid #DDD;
+			border-bottom:1px solid #DDD;
+		}
+		> div {
+			margin-right:0;
+			padding-left:0;
+			padding-right:0;
+			background-color:#FFF;
+			border-left: 0 none;
+			input {
+				border-left:0 none;
+				&.form-control {
+					box-shadow:none;
+				}
+				&:focus {
+					border-top:1px solid $btn-interaction-blue;
+					border-right:1px solid $btn-interaction-blue;
+					border-bottom:1px solid $btn-interaction-blue;
+				}
+			}
+		}
+	}
+	/// CUSTOM CHECKBOXES
+	.checkbox-container {
+		position:relative;
+		display:block;
+		margin-bottom:5px;
+		padding-top:9px;
+		text-indent:30px;
+		font-weight:300;
+		.bootstrap-checkbox {
+			position:absolute;
+			z-index:-1;
+			opacity:0;
+		}
+		.dice-checkbox {
+			display:block;
+			position:absolute;
+			width:25px;
+			height:25px;
+			top:5px;
+			left:0;
+			padding-top:3px;
+			padding-left:3px;
+			text-indent:0;
+			color:#069;
+			font-size:18px;
+			background-color:#FFF;
+			border:1px solid #DDD;
+			&:hover {
+				cursor:pointer;
+			}
+			.icon-check-1 {
+				font-size:18px;
+			}
+		}
+	}
+	/// CUSTOM RADIO BUTTONS
+	.radio-container {
+		position:relative;
+		display:block;
+		margin-bottom:5px;
+		padding-top:9px;
+		font-weight:300;
+	}
+	.dice-tag {
+		display:inline-block;
+		position: relative;
+		padding:5px 15px;
+		line-height:1;
+		background:$dice-white;
+		border:1px solid $border-default-gray;
+		border-radius:20px;
+		span {
+			display: inline-block;
+			margin-left: 3px;
+			padding: 3px 5px 1px 5px;
+			color:$dice-white;
+			font-size: 13px;
+			font-weight: 300;
+			line-height: 1;
+			cursor:pointer;
+			background-color: #CCC;
+			border-radius: 8px;
+			&:hover, &:focus, &:active {
+				background-color:#E5E5E5;
+			}
+		}
+		&.add {
+			margin-left: 0px;
+			color:$btn-default-blue;
+			line-height:1;
+			border-color:$btn-default-blue;
+			padding-left:10px;
+			cursor: pointer;
+			&:hover, &:focus, &:active {
+				border-color:$btn-interaction-blue;
+			}
+			span {
+				margin-left: 0px;
+				margin-right: 3px;
+				color:$btn-default-blue;
+				background-color:$dice-white;
+				border: 1px solid $btn-default-blue;
+				font-size: 14px;
+				padding-top: 1px;
+			}
+			input {
+				position: absolute;
+				display: block;
+				width: 100%;
+				margin: 0px;
+				border: 0px none;
+				left: 0px;
+				top: 3px;
+				border-radius: 20px;
+				padding: 5px 10px;
+			}
+		}
+	}
+	.dice-input-add {
+		display: inline-block;
+		margin-top: 15px;
+		margin-bottom: 15px;
+		color:$btn-default-blue;
+		cursor: pointer;
+		&:hover, &:focus, &:active {
+			color: $btn-interaction-blue;
+			border-color:$btn-interaction-blue;
+		}
+		span {
+			margin-left: 0px;
+			margin-right:3px;
+			padding:1px 3px;
+				line-height:1;
+				border:1px solid $btn-default-blue;
+			border-radius:3px;
+			&:hover, &:focus, &:active {
+			  color: $btn-interaction-blue;
+			  border-color:$btn-interaction-blue;
+			}
+		}
+	}
+	.dice-toggle {
+		.toggle.btn {
+			min-width:60px;
+			min-height:32px;
+			border-radius:20px;
+			border-color:$border-default-gray;
+		}
+		.toggle-group {
+			width:156%;
+		}
+		.toggle-on {
+			width:50%;
+			@include btn(toggle-on);
+		}
+		.toggle-off {
+			width:50%;
+			@include btn(toggle-off);
+		}
+		.toggle-handle {
+			text-align:left;
+			border-radius:20px;
+		}
+	}
+
 	.dice-toggle-wrapper {
 		position:relative;
 		height:30px;
