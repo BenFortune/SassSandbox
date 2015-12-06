@@ -57,7 +57,7 @@ $(document).ready(function() {
 			} else if (this.hasAttribute('data-select-type') && this.getAttribute('data-select-type') === 'multiple') {
 
 				// TODO Finish Multi Select Work
-				
+
 				var that = this;
 				var clickableElements = $('.dropdown-menu li input');
 				clickableElements.on('click', function() {

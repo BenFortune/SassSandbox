@@ -7775,31 +7775,6 @@ h2 {
   color: #6CF;
   border-color: #6CF;
 }
-.dice-form .dice-toggle .toggle.btn {
-  min-width: 60px;
-  min-height: 32px;
-  border-radius: 20px;
-  border-color: #DDD;
-}
-.dice-form .dice-toggle .toggle-group {
-  width: 156%;
-}
-.dice-form .dice-toggle .toggle-on {
-  width: 50%;
-  background-color: #6C6;
-  color: #FFF;
-  border-color: #6C6;
-}
-.dice-form .dice-toggle .toggle-off {
-  width: 50%;
-  background-color: #FC0;
-  color: #FFF;
-  border-color: #FC0;
-}
-.dice-form .dice-toggle .toggle-handle {
-  text-align: left;
-  border-radius: 20px;
-}
 .dice-form .dice-toggle-wrapper {
   position: relative;
   height: 30px;
