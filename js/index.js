@@ -1,34 +1,35 @@
-$(document).ready(function() {
+$(() => {
 
-	var mySlider = $("#slider").slider();
+	const mySlider = $("#slider").slider();
 		mySlider.slider('setValue', 8);
 
-	// Float Label
-	(function floatLabel() {
-		var floatInput = $('.float-label input');
-		var onClass = "float-label-on";
-		var showClass = "float-label";
+	// BEGIN Float Label
+	const floatInput = document.querySelector('.float-label input');
+	const onClass = 'float-label-on';
+	const showClass = 'float-label';
 
-		floatInput.on('focus', function(e) {
-			floatLabelHandler.call(e.target, 'something else');
-		});
-		floatInput.on('blur', function(e) {
-			floatLabelHandler.call(e.target, 'something else');
-		});
-		floatInput.on('keyup', function(e) {
-			floatLabelHandler.call(e.target, 'something else');
-		});
+	floatInput.addEventListener('focus', (e) => {
+		floatLabelHandler.call(e.target, 'something else');
+	});
 
-		function floatLabelHandler() {
-			if (!this.value || this.value === "") {
-				$(this).removeClass(showClass);
-				$(this).prev().removeClass(onClass);
-			} else {
-				$(this).addClass(showClass);
-				$(this).prev().addClass(onClass);
-			}
+	floatInput.addEventListener('blur', (e) => {
+		floatLabelHandler.call(e.target, 'something else');
+	});
+
+	floatInput.addEventListener('keyup', (e) => {
+		floatLabelHandler.call(e.target, 'something else');
+	});
+
+	function floatLabelHandler() {
+		if (!this.value || this.value === "") {
+			this.classList.remove(showClass);
+			this.previousElementSibling.classList.remove(onClass);
+		} else {
+			this.classList.add(showClass);
+			this.previousElementSibling.classList.add(onClass);
 		}
-	}());
+	}
+	// END Float Label
 
 	// Multi Select and Single Select Dropdown
 	(function selectDD() {
@@ -84,18 +85,23 @@ $(document).ready(function() {
 	}());
 
 	// FORM GROUP BUTTON CHANGE
-	(function formBtnGroupChange() {
-		var channelBtn = $('.dice-btn-group-tab button');
+	const channelBtns = document.querySelectorAll('.dice-btn-group-tab button');
 
-		channelBtn.on('click', function(e) {
-			var that = $(this);
+	for (let i = 0; i < channelBtns.length; i++) {
+		channelBtns[i].addEventListener('click', (e) => {
 			e.preventDefault();
-			if (that.hasClass('inactive')) {
-				channelBtn.removeClass('active').addClass('inactive');
-				that.removeClass('inactive').addClass('active');
+			const that = e.target;
+
+			if (that.className === 'btn inactive') {
+				for (btn of channelBtns) {
+					btn.classList.remove('active');
+					btn.classList.add('inactive');
+				}
+				that.classList.remove('inactive');
+				that.classList.add('active');
 			}
 		});
-	}());
+	}
 
 	// CUSTOM CHECKBOX CHECKS
 	(function checkboxCheck() {

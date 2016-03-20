@@ -11,3 +11,4 @@
 - Get multi-select dropdown working
 - Fix issue with all tags removing when clicking tag text
 - Rebuild with vanilla javascript and remove jQuery dependency
+- Ultimately get rid of the Bootstrap framework altogether
