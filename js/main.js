@@ -2,8 +2,13 @@
 
 $(function () {
 
+	// BEGIN MUST USE JQUERY FUNCTIONS
+
 	var mySlider = $("#slider").slider();
 	mySlider.slider('setValue', 8);
+	$('[data-toggle="tooltip"]').tooltip();
+
+	// END MUST USE JQUERY FUNCTIONS
 
 	// BEGIN Float Label
 	var floatInput = document.querySelector('.float-label input');
@@ -93,8 +98,6 @@ $(function () {
 			e.preventDefault();
 			var that = e.target;
 
-			console.log('clicked', that.className);
-
 			if (that.className === 'btn inactive') {
 				var _iteratorNormalCompletion = true;
 				var _didIteratorError = false;
@@ -125,41 +128,27 @@ $(function () {
 				that.classList.remove('inactive');
 				that.classList.add('active');
 			}
-
-			// Remove JqueryNess
-			// if (that.hasClass('inactive')) {
-			// 	channelBtn.removeClass('active').addClass('inactive');
-			// 	that.removeClass('inactive').addClass('active');
-			// }
 		});
 	}
-
-	// const channelBtn = $('.dice-btn-group-tab button');
-	// channelBtn.on('click', function(e) {
-	// 	const that = $(this);
-	// 	e.preventDefault();
-	// 	if (that.hasClass('inactive')) {
-	// 		channelBtn.removeClass('active').addClass('inactive');
-	// 		that.removeClass('inactive').addClass('active');
-	// 	}
-	// });
+	// END FORM GROUP BUTTON CHANGE
 
 	// CUSTOM CHECKBOX CHECKS
-	(function checkboxCheck() {
-		var checkboxes = $('.dice-checkbox');
-		var realChecks = $('.bootstrap-checkbox');
+	var checkboxes = document.querySelectorAll('.dice-checkbox');
+	var checkClass = 'icon-check-1';
 
-		checkboxes.on('click', function (e) {
-			srcEl = $(e.target);
-			if (srcEl.hasClass('icon-check-1')) {
-				srcEl.removeClass('icon-check-1');
-				srcEl.prev().removeAttr('checked');
+	for (var _i = 0; _i < checkboxes.length; _i++) {
+		checkboxes[_i].addEventListener('click', function (e) {
+			var that = e.target;
+
+			if (that.className === 'dice-checkbox ' + checkClass) {
+				that.classList.remove(checkClass);
+				that.previousElementSibling.setAttribute('checked', false);
 			} else {
-				srcEl.addClass('icon-check-1');
-				srcEl.prev().attr('checked', true);
+				that.classList.add(checkClass);
+				that.previousElementSibling.setAttribute('checked', true);
 			}
 		});
-	})();
+	}
 
 	// REMOVE/HIDE TAGS
 	(function removeTags() {
@@ -232,10 +221,5 @@ $(function () {
 			}
 		});
 	})();
-
-	// Initialize tooltips
-	$(function () {
-		$('[data-toggle="tooltip"]').tooltip();
-	});
 });
 //# sourceMappingURL=main.js.map

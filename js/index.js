@@ -1,7 +1,12 @@
 $(() => {
 
+	// BEGIN MUST USE JQUERY FUNCTIONS
+
 	const mySlider = $("#slider").slider();
 		mySlider.slider('setValue', 8);
+	$('[data-toggle="tooltip"]').tooltip();
+
+	// END MUST USE JQUERY FUNCTIONS
 
 	// BEGIN Float Label
 	const floatInput = document.querySelector('.float-label input');
@@ -102,23 +107,25 @@ $(() => {
 			}
 		});
 	}
+	// END FORM GROUP BUTTON CHANGE
 
 	// CUSTOM CHECKBOX CHECKS
-	(function checkboxCheck() {
-		var checkboxes = $('.dice-checkbox');
-		var realChecks = $('.bootstrap-checkbox');
+	const checkboxes = document.querySelectorAll('.dice-checkbox');
+	const checkClass = 'icon-check-1';
 
-		checkboxes.on('click', function(e) {
-			srcEl = $(e.target);
-			if (srcEl.hasClass('icon-check-1')) {
-				srcEl.removeClass('icon-check-1');
-				srcEl.prev().removeAttr('checked');
+	for (let i = 0; i < checkboxes.length; i++) {
+		checkboxes[i].addEventListener('click', (e) => {
+			const that = e.target;
+
+			if (that.className === 'dice-checkbox ' + checkClass) {
+				that.classList.remove(checkClass);
+				that.previousElementSibling.setAttribute('checked', false);
 			} else {
-				srcEl.addClass('icon-check-1');
-				srcEl.prev().attr('checked', true);
+				that.classList.add(checkClass);
+				that.previousElementSibling.setAttribute('checked', true);
 			}
 		});
-	}());
+	}
 
 	// REMOVE/HIDE TAGS
 	(function removeTags() {
@@ -192,8 +199,4 @@ $(() => {
 		})
 	}());
 
-	// Initialize tooltips
-	$(function () {
-		$('[data-toggle="tooltip"]').tooltip()
-	})
 });
