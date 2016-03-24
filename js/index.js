@@ -110,48 +110,53 @@ $(() => {
 	// END FORM GROUP BUTTON CHANGE
 
 	// CUSTOM CHECKBOX CHECKS
-	const checkboxes = document.querySelectorAll('.dice-checkbox');
-	const checkClass = 'icon-check-1';
+	function customCheckboxes() {
+		const checkboxes = document.querySelectorAll('.dice-checkbox');
+		const checkClass = 'icon-check-1';
 
-	for (let i = 0; i < checkboxes.length; i++) {
-		checkboxes[i].addEventListener('click', (e) => {
-			const that = e.target;
+		for (let i = 0; i < checkboxes.length; i++) {
+			checkboxes[i].addEventListener('click', (e) => {
+				const that = e.target;
 
-			if (that.className === 'dice-checkbox ' + checkClass) {
-				that.classList.remove(checkClass);
-				that.previousElementSibling.setAttribute('checked', false);
-			} else {
-				that.classList.add(checkClass);
-				that.previousElementSibling.setAttribute('checked', true);
-			}
-		});
+				if (that.className === 'dice-checkbox ' + checkClass) {
+					that.classList.remove(checkClass);
+					that.previousElementSibling.setAttribute('checked', false);
+				} else {
+					that.classList.add(checkClass);
+					that.previousElementSibling.setAttribute('checked', true);
+				}
+			});
+		}
 	}
+	customCheckboxes();
 
 	// REMOVE/HIDE TAGS
-	(function removeTags() {
-		var tags = $('.dice-tag');
-		tags.on('click', function(e) {
-			srcEl = $(e.target);
-			if ($(this).hasClass('add')) {
+	const tags = document.querySelectorAll('.dice-tag');
+
+	for (let i = 0; i < tags.length; i++) {
+		tags[i].addEventListener('click', (e) => {
+			const that = e.target;
+
+			if (that.className === 'dice-tag add') {
 				return;
 			} else {
-				srcEl.parent().addClass('remove');
-				addNewTag($(this).parent());
+				that.parentNode.classList.add('remove');
+				addNewTag(that.parentNode);
 			}
-		});
-	}());
+		})
+	}
 
 	// ADD TAGS
-	(function addTags() {
-		var tags = $('.dice-tag.add');
-		var inputs = $('.dice-tag.add input');
+	function addTags() {
+		const addTags = $('.dice-tag.add');
+		const addInputs = $('.dice-tag.add input');
 		tags.on('click', function() {
 			$(this).find('.remove').removeClass('remove').focus();
 		});
 		inputs.on('blur', function() {
-			var value = $(this).val();
+			const value = $(this).val();
 			if (value) {
-				var parentEl = $(this).parent().parent();
+				const parentEl = $(this).parent().parent();
 				$(this).parent().text(value).removeClass('add').append('<span>X</span>');
 				addNewTag(parentEl);
 				addTags();
@@ -159,27 +164,29 @@ $(() => {
 				return;
 			}
 		});
-	}());
+	}
 
 	// ADDING NEW TAGS
 	function addNewTag(tagInput) {
-		var targetEl = $(tagInput).children().last();
+		console.log('tag input is', tagInput);
+		const targetEl = $(tagInput).children().last();
 		if ($(targetEl).hasClass('add')) {
 			return;
 		} else {
-			var addTagMarkup = '<div class="dice-tag add"><span>+</span>Add Tag <input class="remove" type="text" placeholder="Add Tag"></div>'
+			const addTagMarkup = '<div class="dice-tag add"><span>+</span>Add Tag <input class="remove" type="text" placeholder="Add Tag"></div>'
 			$(tagInput).append(addTagMarkup);
 		}
 	};
 
-	(function addNewInput() {
-		var inputGroup = $('.dice-input-group');
-		var addBtn = $('.dice-input-add');
-		addBtn.on('click', function() {
-			inputGroup.append('<label for="checkbox1" class="checkbox-container"><input class="bootstrap-checkbox" type="checkbox" checked><span class="dice-checkbox icon-check-1"></span>Check me</label>');
-			checkboxCheck();
-		});
-	}());
+	// ADD NEW INPUTS
+	const inputGroup = document.querySelector('.dice-input-group');
+	const addBtn = document.querySelector('.dice-input-add');
+
+	addBtn.addEventListener('click', (e) => {
+		inputGroup.innerHTML += '<label for="checkbox1" class="checkbox-container"><input class="bootstrap-checkbox" type="checkbox" checked><span class="dice-checkbox icon-check-1"></span>Check me</label>';
+		customCheckboxes();
+
+	});
 
 	(function diceToggle() {
 		// Initialize default status
