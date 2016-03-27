@@ -1,40 +1,15 @@
+import { miscJquery } from './src/misc-jquery';
+import { floatLabel } from './src/float-label';
+import { toggleButton } from './src/toggle-button';
+import { buttonTabs } from './src/button-tabs';
+
 $(() => {
 
-	// BEGIN MUST USE JQUERY FUNCTIONS
-
-	const mySlider = $("#slider").slider();
-		mySlider.slider('setValue', 8);
-	$('[data-toggle="tooltip"]').tooltip();
-
-	// END MUST USE JQUERY FUNCTIONS
-
-	// BEGIN Float Label
-	const floatInput = document.querySelector('.float-label input');
-	const onClass = 'float-label-on';
-	const showClass = 'float-label';
-
-	floatInput.addEventListener('focus', (e) => {
-		floatLabelHandler.call(e.target, 'something else');
-	});
-
-	floatInput.addEventListener('blur', (e) => {
-		floatLabelHandler.call(e.target, 'something else');
-	});
-
-	floatInput.addEventListener('keyup', (e) => {
-		floatLabelHandler.call(e.target, 'something else');
-	});
-
-	function floatLabelHandler() {
-		if (!this.value || this.value === "") {
-			this.classList.remove(showClass);
-			this.previousElementSibling.classList.remove(onClass);
-		} else {
-			this.classList.add(showClass);
-			this.previousElementSibling.classList.add(onClass);
-		}
-	}
-	// END Float Label
+	// INITIALIZE IMPORTS
+	miscJquery();
+	floatLabel();
+	toggleButton();
+	buttonTabs();
 
 	// Multi Select and Single Select Dropdown
 	(function selectDD() {
@@ -88,26 +63,6 @@ $(() => {
 			}
 		}
 	}());
-
-	// FORM GROUP BUTTON CHANGE
-	const channelBtns = document.querySelectorAll('.dice-btn-group-tab button');
-
-	for (let i = 0; i < channelBtns.length; i++) {
-		channelBtns[i].addEventListener('click', (e) => {
-			e.preventDefault();
-			const that = e.target;
-
-			if (that.className === 'btn inactive') {
-				for (btn of channelBtns) {
-					btn.classList.remove('active');
-					btn.classList.add('inactive');
-				}
-				that.classList.remove('inactive');
-				that.classList.add('active');
-			}
-		});
-	}
-	// END FORM GROUP BUTTON CHANGE
 
 	// CUSTOM CHECKBOX CHECKS
 	function customCheckboxes() {
@@ -186,25 +141,6 @@ $(() => {
 		inputGroup.innerHTML += '<label for="checkbox1" class="checkbox-container"><input class="bootstrap-checkbox" type="checkbox" checked><span class="dice-checkbox icon-check-1"></span>Check me</label>';
 		customCheckboxes();
 
-	});
-
-	// BUTTON TOGGLE ACTIONS
-	const diceToggle = document.querySelector('.dice-toggle-control');
-	const diceToggleLabel = document.querySelector('.dice-toggle-label');
-
-	diceToggle.classList.add('on');
-
-	diceToggle.addEventListener('click', (e) => {
-		const that = e.target;
-		if(that.parentNode.className === 'dice-toggle-control on') {
-			that.parentNode.classList.remove('on');
-			that.parentNode.classList.add('off');
-			diceToggleLabel.textContent = 'Off';
-		} else {
-			that.parentNode.classList.remove('off');
-			that.parentNode.classList.add('on');
-			diceToggleLabel.textContent = 'On';
-		}
 	});
 
 });

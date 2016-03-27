@@ -4,7 +4,7 @@ module.exports = {
 		'sass:css',
 		'concat:css',
 		'cssmin:css',
-		'babel',
+		'browserify',
 		'concat:js'
 	],
 	'sassdoc': [
@@ -17,7 +17,7 @@ module.exports = {
 		'cssmin:css'
 	],
 	'js': [
-		'babel',
+		'browserify',
 		'concat:js'
 	]
 }
