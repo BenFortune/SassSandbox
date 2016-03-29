@@ -9,7 +9,7 @@ module.exports = {
 			]
 		},
 		files: {
-			'js/module.js': ['js/index.js']
+			'js/main.js': ['js/index.js']
 		}
 	}
 }

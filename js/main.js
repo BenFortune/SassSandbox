@@ -9,6 +9,8 @@ var _toggleButton = require('./src/toggle-button');
 
 var _buttonTabs = require('./src/button-tabs');
 
+var _customCheckbox = require('./src/custom-checkbox');
+
 $(function () {
 
 	// INITIALIZE IMPORTS
@@ -16,6 +18,7 @@ $(function () {
 	(0, _floatLabel.floatLabel)();
 	(0, _toggleButton.toggleButton)();
 	(0, _buttonTabs.buttonTabs)();
+	(0, _customCheckbox.customCheckbox)();
 
 	// Multi Select and Single Select Dropdown
 	(function selectDD() {
@@ -69,27 +72,6 @@ $(function () {
 		}
 	})();
 
-	// CUSTOM CHECKBOX CHECKS
-	function customCheckboxes() {
-		var checkboxes = document.querySelectorAll('.dice-checkbox');
-		var checkClass = 'icon-check-1';
-
-		for (var i = 0; i < checkboxes.length; i++) {
-			checkboxes[i].addEventListener('click', function (e) {
-				var that = e.target;
-
-				if (that.className === 'dice-checkbox ' + checkClass) {
-					that.classList.remove(checkClass);
-					that.previousElementSibling.setAttribute('checked', false);
-				} else {
-					that.classList.add(checkClass);
-					that.previousElementSibling.setAttribute('checked', true);
-				}
-			});
-		}
-	}
-	customCheckboxes();
-
 	// REMOVE/HIDE TAGS
 	var tags = document.querySelectorAll('.dice-tag');
 
@@ -137,18 +119,9 @@ $(function () {
 			$(tagInput).append(addTagMarkup);
 		}
 	};
-
-	// ADD NEW INPUTS
-	var inputGroup = document.querySelector('.dice-input-group');
-	var addBtn = document.querySelector('.dice-input-add');
-
-	addBtn.addEventListener('click', function (e) {
-		inputGroup.innerHTML += '<label for="checkbox1" class="checkbox-container"><input class="bootstrap-checkbox" type="checkbox" checked><span class="dice-checkbox icon-check-1"></span>Check me</label>';
-		customCheckboxes();
-	});
 });
 
-},{"./src/button-tabs":2,"./src/float-label":3,"./src/misc-jquery":4,"./src/toggle-button":5}],2:[function(require,module,exports){
+},{"./src/button-tabs":2,"./src/custom-checkbox":3,"./src/float-label":4,"./src/misc-jquery":5,"./src/toggle-button":6}],2:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -205,6 +178,45 @@ function buttonTabs() {
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
+exports.customCheckbox = customCheckbox;
+function customCheckbox() {
+	// CUSTOM CHECKBOX CHECKS
+	function customCheckboxes() {
+		var checkboxes = document.querySelectorAll('.dice-checkbox');
+		var checkClass = 'icon-check-1';
+
+		for (var i = 0; i < checkboxes.length; i++) {
+			checkboxes[i].addEventListener('click', function (e) {
+				var that = e.target;
+
+				if (that.className === 'dice-checkbox ' + checkClass) {
+					that.classList.remove(checkClass);
+					that.previousElementSibling.setAttribute('checked', false);
+				} else {
+					that.classList.add(checkClass);
+					that.previousElementSibling.setAttribute('checked', true);
+				}
+			});
+		}
+	}
+	customCheckboxes();
+
+	// ADD NEW INPUTS
+	var inputGroup = document.querySelector('.dice-input-group');
+	var addBtn = document.querySelector('.dice-input-add');
+
+	addBtn.addEventListener('click', function (e) {
+		inputGroup.innerHTML += '<label for="checkbox1" class="checkbox-container"><input class="bootstrap-checkbox" type="checkbox" checked><span class="dice-checkbox icon-check-1"></span>Check me</label>';
+		customCheckboxes();
+	});
+}
+
+},{}],4:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
 exports.floatLabel = floatLabel;
 function floatLabel() {
 	// BEGIN Float Label
@@ -236,7 +248,7 @@ function floatLabel() {
 	// END Float Label
 }
 
-},{}],4:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -253,7 +265,7 @@ function miscJquery() {
 	// END MUST USE JQUERY FUNCTIONS
 }
 
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
