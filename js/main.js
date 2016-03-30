@@ -11,6 +11,8 @@ var _buttonTabs = require('./src/button-tabs');
 
 var _customCheckbox = require('./src/custom-checkbox');
 
+var _tags = require('./src/tags');
+
 $(function () {
 
 	// INITIALIZE IMPORTS
@@ -19,6 +21,7 @@ $(function () {
 	(0, _toggleButton.toggleButton)();
 	(0, _buttonTabs.buttonTabs)();
 	(0, _customCheckbox.customCheckbox)();
+	(0, _tags.tags)();
 
 	// Multi Select and Single Select Dropdown
 	(function selectDD() {
@@ -71,57 +74,9 @@ $(function () {
 			}
 		}
 	})();
-
-	// REMOVE/HIDE TAGS
-	var tags = document.querySelectorAll('.dice-tag');
-
-	for (var i = 0; i < tags.length; i++) {
-		tags[i].addEventListener('click', function (e) {
-			var that = e.target;
-
-			if (that.className === 'dice-tag add') {
-				return;
-			} else {
-				that.parentNode.classList.add('remove');
-				addNewTag(that.parentNode);
-			}
-		});
-	}
-
-	// ADD TAGS
-	function addTags() {
-		var addTags = $('.dice-tag.add');
-		var addInputs = $('.dice-tag.add input');
-		tags.on('click', function () {
-			$(this).find('.remove').removeClass('remove').focus();
-		});
-		inputs.on('blur', function () {
-			var value = $(this).val();
-			if (value) {
-				var parentEl = $(this).parent().parent();
-				$(this).parent().text(value).removeClass('add').append('<span>X</span>');
-				addNewTag(parentEl);
-				addTags();
-			} else {
-				return;
-			}
-		});
-	}
-
-	// ADDING NEW TAGS
-	function addNewTag(tagInput) {
-		console.log('tag input is', tagInput);
-		var targetEl = $(tagInput).children().last();
-		if ($(targetEl).hasClass('add')) {
-			return;
-		} else {
-			var addTagMarkup = '<div class="dice-tag add"><span>+</span>Add Tag <input class="remove" type="text" placeholder="Add Tag"></div>';
-			$(tagInput).append(addTagMarkup);
-		}
-	};
 });
 
-},{"./src/button-tabs":2,"./src/custom-checkbox":3,"./src/float-label":4,"./src/misc-jquery":5,"./src/toggle-button":6}],2:[function(require,module,exports){
+},{"./src/button-tabs":2,"./src/custom-checkbox":3,"./src/float-label":4,"./src/misc-jquery":5,"./src/tags":6,"./src/toggle-button":7}],2:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -266,6 +221,63 @@ function miscJquery() {
 }
 
 },{}],6:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+exports.tags = tags;
+function tags() {
+	// REMOVE/HIDE TAGS
+	var tags = document.querySelectorAll('.dice-tag');
+
+	for (var i = 0; i < tags.length; i++) {
+		tags[i].addEventListener('click', function (e) {
+			var that = e.target;
+
+			if (that.className === 'dice-tag add') {
+				return;
+			} else {
+				that.parentNode.classList.add('remove');
+				addNewTag(that.parentNode);
+			}
+		});
+	}
+
+	// ADD TAGS
+	function addTags() {
+		var addTags = $('.dice-tag.add');
+		var addInputs = $('.dice-tag.add input');
+		addTags.on('click', function () {
+			$(this).find('.remove').removeClass('remove').focus();
+		});
+		addInputs.on('blur', function () {
+			var value = $(this).val();
+			if (value) {
+				var parentEl = $(this).parent().parent();
+				$(this).parent().text(value).removeClass('add').append('<span>X</span>');
+				addNewTag(parentEl);
+				addTags();
+			} else {
+				return;
+			}
+		});
+	}
+	addTags();
+
+	// ADDING NEW TAGS
+	function addNewTag(tagInput) {
+		var targetEl = $(tagInput).children().last();
+		if ($(targetEl).hasClass('add')) {
+			return;
+		} else {
+			var addTagMarkup = '<div class="dice-tag add"><span>+</span>Add Tag <input class="remove" type="text" placeholder="Add Tag"></div>';
+			$(tagInput).append(addTagMarkup);
+		}
+	};
+}
+
+},{}],7:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
