@@ -11,6 +11,8 @@ var _buttonTabs = require('./src/button-tabs');
 
 var _customCheckbox = require('./src/custom-checkbox');
 
+var _customDropdown = require('./src/custom-dropdown');
+
 var _tags = require('./src/tags');
 
 $(function () {
@@ -22,61 +24,10 @@ $(function () {
 	(0, _buttonTabs.buttonTabs)();
 	(0, _customCheckbox.customCheckbox)();
 	(0, _tags.tags)();
-
-	// Multi Select and Single Select Dropdown
-	(function selectDD() {
-		var toggleTrigger = $('.dropdown-toggle');
-
-		toggleTrigger.on('click', function () {
-			var that = this;
-			getSelectType.call(that, 'oneArg', 'twoArg');
-		});
-
-		function getSelectType(button, arg1, arg2) {
-			if (this.hasAttribute('data-select-type') && this.getAttribute('data-select-type') === 'single') {
-				var that = this;
-				var clickableElements = $('.dropdown-menu li a');
-
-				if ($(this).hasClass('dropdown-caret')) {
-					var btnText = $(that).prev();
-					clickableElements.on('click', function () {
-						btnText.text(this.innerHTML);
-					});
-				} else {
-					clickableElements.on('click', function () {
-						that.innerHTML = this.innerHTML;
-					});
-				}
-			} else if (this.hasAttribute('data-select-type') && this.getAttribute('data-select-type') === 'multiple') {
-
-				// TODO Finish Multi Select Work
-
-				var that = this;
-				var clickableElements = $('.dropdown-menu li input');
-				clickableElements.on('click', function () {
-					console.log("values are", this.getAttribute('value'));
-					if (valueArray === undefined) {
-						var valueArray = [];
-						var value = this.getAttribute('value');
-						var values = valueArray.push(value);
-						var allValues = valueArray;
-						$('#multipleBtn').text(valueArray);
-						console.log('all values', allValues);
-					} else {
-						console.log('all values where defined', allValues);
-						var value = this.getAttribute('value');
-						var values = allValues.push(' ' + value);
-						$('#multipleBtn').text(valueArray);
-					}
-				});
-
-				// TODO resuable function for multiple values
-			}
-		}
-	})();
+	(0, _customDropdown.customDropdown)();
 });
 
-},{"./src/button-tabs":2,"./src/custom-checkbox":3,"./src/float-label":4,"./src/misc-jquery":5,"./src/tags":6,"./src/toggle-button":7}],2:[function(require,module,exports){
+},{"./src/button-tabs":2,"./src/custom-checkbox":3,"./src/custom-dropdown":4,"./src/float-label":5,"./src/misc-jquery":6,"./src/tags":7,"./src/toggle-button":8}],2:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -172,6 +123,67 @@ function customCheckbox() {
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
+exports.customDropdown = customDropdown;
+function customDropdown() {
+	// Multi Select and Single Select Dropdown
+	(function selectDD() {
+		var toggleTrigger = $('.dropdown-toggle');
+
+		toggleTrigger.on('click', function () {
+			var that = this;
+			getSelectType.call(that, 'oneArg', 'twoArg');
+		});
+
+		function getSelectType(button, arg1, arg2) {
+			if (this.hasAttribute('data-select-type') && this.getAttribute('data-select-type') === 'single') {
+				var that = this;
+				var clickableElements = $('.dropdown-menu li a');
+
+				if ($(this).hasClass('dropdown-caret')) {
+					var btnText = $(that).prev();
+					clickableElements.on('click', function () {
+						btnText.text(this.innerHTML);
+					});
+				} else {
+					clickableElements.on('click', function () {
+						that.innerHTML = this.innerHTML;
+					});
+				}
+			} else if (this.hasAttribute('data-select-type') && this.getAttribute('data-select-type') === 'multiple') {
+
+				// TODO Finish Multi Select Work
+
+				var that = this;
+				var clickableElements = $('.dropdown-menu li input');
+				clickableElements.on('click', function () {
+					console.log("values are", this.getAttribute('value'));
+					if (valueArray === undefined) {
+						var valueArray = [];
+						var value = this.getAttribute('value');
+						var values = valueArray.push(value);
+						var allValues = valueArray;
+						$('#multipleBtn').text(valueArray);
+						console.log('all values', allValues);
+					} else {
+						console.log('all values where defined', allValues);
+						var value = this.getAttribute('value');
+						var values = allValues.push(' ' + value);
+						$('#multipleBtn').text(valueArray);
+					}
+				});
+
+				// TODO resuable function for multiple values
+			}
+		}
+	})();
+}
+
+},{}],5:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
 exports.floatLabel = floatLabel;
 function floatLabel() {
 	// BEGIN Float Label
@@ -203,7 +215,7 @@ function floatLabel() {
 	// END Float Label
 }
 
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -220,7 +232,7 @@ function miscJquery() {
 	// END MUST USE JQUERY FUNCTIONS
 }
 
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -277,7 +289,7 @@ function tags() {
 	};
 }
 
-},{}],7:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
