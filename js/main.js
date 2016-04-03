@@ -257,10 +257,11 @@ function tags() {
 	}
 
 	// ADD TAGS
-	function addTags() {
+	function addTag() {
 		var addTags = $('.dice-tag.add');
 		var addInputs = $('.dice-tag.add input');
 		addTags.on('click', function () {
+			console.log('removed');
 			$(this).find('.remove').removeClass('remove').focus();
 		});
 		addInputs.on('blur', function () {
@@ -269,13 +270,13 @@ function tags() {
 				var parentEl = $(this).parent().parent();
 				$(this).parent().text(value).removeClass('add').append('<span>X</span>');
 				addNewTag(parentEl);
-				addTags();
+				addTag();
 			} else {
 				return;
 			}
 		});
 	}
-	addTags();
+	addTag();
 
 	// ADDING NEW TAGS
 	function addNewTag(tagInput) {

@@ -16,11 +16,13 @@ export function tags() {
 	}
 
 	// ADD TAGS
-	function addTags() {
+	function addTag() {
 		const addTags = $('.dice-tag.add');
 		const addInputs = $('.dice-tag.add input');
 		addTags.on('click', function() {
+			console.log('removed');
 			$(this).find('.remove').removeClass('remove').focus();
+			addNewTag();
 		});
 		addInputs.on('blur', function() {
 			const value = $(this).val();
@@ -28,13 +30,13 @@ export function tags() {
 				const parentEl = $(this).parent().parent();
 				$(this).parent().text(value).removeClass('add').append('<span>X</span>');
 				addNewTag(parentEl);
-				addTags();
+				addTag();
 			} else {
 				return;
 			}
 		});
 	}
-	addTags();
+	addTag();
 
 	// ADDING NEW TAGS
 	function addNewTag(tagInput) {
