@@ -1,4 +1,4 @@
-export function customCheckbox() {
+export default function customCheckbox() {
 	// CUSTOM CHECKBOX CHECKS
 	function customCheckboxes() {
 		const checkboxes = document.querySelectorAll('.dice-checkbox');

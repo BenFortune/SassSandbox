@@ -1,4 +1,4 @@
-export function buttonTabs() {
+export default function buttonTabs() {
 	// FORM GROUP BUTTON CHANGE
 	const channelBtns = document.querySelectorAll('.dice-btn-group-tab button');
 

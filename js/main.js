@@ -3,28 +3,44 @@
 
 var _miscJquery = require('./src/misc-jquery');
 
+var _miscJquery2 = _interopRequireDefault(_miscJquery);
+
 var _floatLabel = require('./src/float-label');
+
+var _floatLabel2 = _interopRequireDefault(_floatLabel);
 
 var _toggleButton = require('./src/toggle-button');
 
+var _toggleButton2 = _interopRequireDefault(_toggleButton);
+
 var _buttonTabs = require('./src/button-tabs');
+
+var _buttonTabs2 = _interopRequireDefault(_buttonTabs);
 
 var _customCheckbox = require('./src/custom-checkbox');
 
+var _customCheckbox2 = _interopRequireDefault(_customCheckbox);
+
 var _customDropdown = require('./src/custom-dropdown');
 
+var _customDropdown2 = _interopRequireDefault(_customDropdown);
+
 var _tags = require('./src/tags');
+
+var _tags2 = _interopRequireDefault(_tags);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 $(function () {
 
 	// INITIALIZE IMPORTS
-	(0, _miscJquery.miscJquery)();
-	(0, _floatLabel.floatLabel)();
-	(0, _toggleButton.toggleButton)();
-	(0, _buttonTabs.buttonTabs)();
-	(0, _customCheckbox.customCheckbox)();
-	(0, _tags.tags)();
-	(0, _customDropdown.customDropdown)();
+	(0, _miscJquery2.default)();
+	(0, _floatLabel2.default)();
+	(0, _toggleButton2.default)();
+	(0, _buttonTabs2.default)();
+	(0, _customCheckbox2.default)();
+	(0, _tags2.default)();
+	(0, _customDropdown2.default)();
 });
 
 },{"./src/button-tabs":2,"./src/custom-checkbox":3,"./src/custom-dropdown":4,"./src/float-label":5,"./src/misc-jquery":6,"./src/tags":7,"./src/toggle-button":8}],2:[function(require,module,exports){
@@ -33,7 +49,7 @@ $(function () {
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
-exports.buttonTabs = buttonTabs;
+exports.default = buttonTabs;
 function buttonTabs() {
 	// FORM GROUP BUTTON CHANGE
 	var channelBtns = document.querySelectorAll('.dice-btn-group-tab button');
@@ -84,7 +100,7 @@ function buttonTabs() {
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
-exports.customCheckbox = customCheckbox;
+exports.default = customCheckbox;
 function customCheckbox() {
 	// CUSTOM CHECKBOX CHECKS
 	function customCheckboxes() {
@@ -123,7 +139,7 @@ function customCheckbox() {
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
-exports.customDropdown = customDropdown;
+exports.default = customDropdown;
 function customDropdown() {
 	// Multi Select and Single Select Dropdown
 	(function selectDD() {
@@ -184,24 +200,26 @@ function customDropdown() {
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
-exports.floatLabel = floatLabel;
+exports.default = floatLabel;
 function floatLabel() {
 	// BEGIN Float Label
-	var floatInput = document.querySelector('.float-label input');
+	var floatInput = document.querySelectorAll('.float-label input');
 	var onClass = 'float-label-on';
 	var showClass = 'float-label';
 
-	floatInput.addEventListener('focus', function (e) {
-		floatLabelHandler.call(e.target, 'something else');
-	});
+	for (var i = 0; i < floatInput.length; i++) {
+		floatInput[i].addEventListener('focus', function (e) {
+			floatLabelHandler.call(e.target, 'something else');
+		});
 
-	floatInput.addEventListener('blur', function (e) {
-		floatLabelHandler.call(e.target, 'something else');
-	});
+		floatInput[i].addEventListener('blur', function (e) {
+			floatLabelHandler.call(e.target, 'something else');
+		});
 
-	floatInput.addEventListener('keyup', function (e) {
-		floatLabelHandler.call(e.target, 'something else');
-	});
+		floatInput[i].addEventListener('keyup', function (e) {
+			floatLabelHandler.call(e.target, 'something else');
+		});
+	}
 
 	function floatLabelHandler() {
 		if (!this.value || this.value === "") {
@@ -221,7 +239,7 @@ function floatLabel() {
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
-exports.miscJquery = miscJquery;
+exports.default = miscJquery;
 function miscJquery() {
 	// BEGIN MUST USE JQUERY FUNCTIONS
 
@@ -238,7 +256,7 @@ function miscJquery() {
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
-exports.tags = tags;
+exports.default = tags;
 function tags() {
 	// REMOVE/HIDE TAGS
 	var tags = document.querySelectorAll('.dice-tag');
@@ -263,6 +281,7 @@ function tags() {
 		addTags.on('click', function () {
 			console.log('removed');
 			$(this).find('.remove').removeClass('remove').focus();
+			addNewTag();
 		});
 		addInputs.on('blur', function () {
 			var value = $(this).val();
@@ -296,7 +315,7 @@ function tags() {
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
-exports.toggleButton = toggleButton;
+exports.default = toggleButton;
 function toggleButton() {
 	// BUTTON TOGGLE ACTIONS
 	var diceToggle = document.querySelector('.dice-toggle-control');

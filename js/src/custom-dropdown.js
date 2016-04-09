@@ -1,4 +1,4 @@
-export function customDropdown() {
+export default function customDropdown() {
 	// Multi Select and Single Select Dropdown
 	(function selectDD() {
 		var toggleTrigger = $('.dropdown-toggle');

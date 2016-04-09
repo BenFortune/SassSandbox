@@ -1,4 +1,4 @@
-export function tags() {
+export default function tags() {
 	// REMOVE/HIDE TAGS
 	const tags = document.querySelectorAll('.dice-tag');
 

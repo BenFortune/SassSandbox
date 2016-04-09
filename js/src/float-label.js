@@ -1,20 +1,22 @@
-export function floatLabel() {
+export default function floatLabel() {
 	// BEGIN Float Label
-	const floatInput = document.querySelector('.float-label input');
+	const floatInput = document.querySelectorAll('.float-label input');
 	const onClass = 'float-label-on';
 	const showClass = 'float-label';
 
-	floatInput.addEventListener('focus', (e) => {
-		floatLabelHandler.call(e.target, 'something else');
-	});
+	for (let i = 0; i < floatInput.length; i++) {
+		floatInput[i].addEventListener('focus', (e) => {
+			floatLabelHandler.call(e.target, 'something else');
+		});
 
-	floatInput.addEventListener('blur', (e) => {
-		floatLabelHandler.call(e.target, 'something else');
-	});
+		floatInput[i].addEventListener('blur', (e) => {
+			floatLabelHandler.call(e.target, 'something else');
+		});
 
-	floatInput.addEventListener('keyup', (e) => {
-		floatLabelHandler.call(e.target, 'something else');
-	});
+		floatInput[i].addEventListener('keyup', (e) => {
+			floatLabelHandler.call(e.target, 'something else');
+		});
+	}
 
 	function floatLabelHandler() {
 		if (!this.value || this.value === "") {

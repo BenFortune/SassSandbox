@@ -1,4 +1,4 @@
-export function miscJquery() {
+export default function miscJquery() {
 	// BEGIN MUST USE JQUERY FUNCTIONS
 
 	const mySlider = $("#slider").slider();
