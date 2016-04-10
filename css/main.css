@@ -7702,6 +7702,10 @@ input.float-label::-moz-placeholder {
   padding: 15px 30px;
 }
 
+.popover-title {
+  background-color: #DDD;
+}
+
 @font-face {
   font-family: 'Icons';
   src: url("../fonts/icon.eot");
