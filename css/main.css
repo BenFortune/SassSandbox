@@ -7706,6 +7706,20 @@ input.float-label::-moz-placeholder {
   background-color: #DDD;
 }
 
+.dice-tabs .nav-tabs > li.active > a,
+.dice-tabs .nav-tabs > li.active > a:focus,
+.dice-tabs .nav-tabs > li.active > a:hover {
+  background-color: transparent;
+  border-top: 1px solid #DDD;
+  border-left: 1px solid #DDD;
+  border-right: 1px solid #DDD;
+  border-bottom: 1px solid #F5F5F5;
+}
+.dice-tabs .tab-pane {
+  margin: 1em 0;
+  padding: 0 1em;
+}
+
 @font-face {
   font-family: 'Icons';
   src: url("../fonts/icon.eot");

@@ -4,8 +4,8 @@ module.exports = {
 		presets: ['es2015']
 	},
 	dist: {
-        files: {
-            'js/main.js': 'js/index.js'
-        }
-    }
+		files: {
+			'js/main.js': 'js/index.js'
+		}
+	}
 }
